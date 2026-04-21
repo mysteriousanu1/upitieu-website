@@ -1,6 +1,7 @@
 export const SITE = {
-  website: "https://upitieu.com", 
+  website: "https://upitieu.com",
   author: "UP ITI Union",
+  profile: "https://upitieu.com", 
   desc: "Official website for the Uttar Pradesh ITI Employees Union.",
   title: "UP ITI Employees Union",
   ogImage: "astropaper-og.jpg",
