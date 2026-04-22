@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UPITI Employees Association</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans flex flex-col min-h-screen">
+
+    <header class="bg-white shadow-md border-b-4 border-blue-700">
+        <div class="container mx-auto px-4 py-4 flex flex-col md:flex-row items-center justify-between">
+            <div class="flex items-center mb-4 md:mb-0">
+                <div class="w-20 h-20 bg-blue-100 border-2 border-blue-600 flex items-center justify-center rounded-full text-blue-700 font-bold text-xl shadow-inner">
+                    LOGO
+                </div>
+            </div>
+            
+            <div class="text-center md:text-left flex-1 px-4">
+                <h2 class="text-sm text-red-600 font-bold mb-1">संबद्ध: राज्य कर्मचारी संयुक्त परिषद, उत्तर प्रदेश</h2>
+                <h1 class="text-2xl md:text-3xl font-extrabold text-blue-800 mb-1">उत्तरप्रदेश प्रशिक्षण संस्थान कर्मचारी संघ</h1>
+                <p class="text-sm md:text-base text-gray-600 font-semibold uppercase tracking-wide">UTTAR Pradesh Industrial Training Institute Employees Association.</p>
+            </div>
+        </div>
+    </header>
+
+    <nav class="bg-blue-800 text-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <ul class="flex flex-wrap items-center justify-center md:justify-start space-x-1 md:space-x-6 py-3 text-sm md:text-base font-medium">
+                <li><a href="#" class="hover:bg-blue-700 px-3 py-2 rounded transition">मुख्य पृष्ठ</a></li>
+                <li><a href="#" class="hover:bg-blue-700 px-3 py-2 rounded transition">हमारे बारे में</a></li>
+                <li><a href="#" class="hover:bg-blue-700 px-3 py-2 rounded transition">संगठन संरचना</a></li>
+                <li><a href="#" class="hover:bg-blue-700 px-3 py-2 rounded transition">बटनाक्रम</a></li>
+                <li><a href="#" class="hover:bg-blue-700 px-3 py-2 rounded transition">गेलरी</a></li>
+                <li><a href="#" class="hover:bg-blue-700 px-3 py-2 rounded transition">जीव</a></li>
+                <li><a href="#" class="hover:bg-blue-700 px-3 py-2 rounded transition">सरपर्क सूत्र</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container mx-auto px-4 py-8 flex-grow flex flex-col md:flex-row gap-8">
+        
+        <div class="w-full md:w-2/3 space-y-8">
+            <section class="bg-white p-6 rounded-lg shadow border border-gray-200">
+                <h2 class="text-2xl font-bold text-blue-800 mb-4 border-b-2 border-red-500 pb-2 inline-block">परिचय (Introduction)</h2>
+                <p class="text-gray-700 leading-relaxed mb-4">
+                    उत्तर प्रदेश औद्योगिक प्रशिक्षण संस्थान कर्मचारी संघ में आपका स्वागत है। यह संगठन कर्मचारियों के हितों और अधिकारों की रक्षा के लिए समर्पित है...
+                </p>
+                <a href="#" class="text-blue-600 font-semibold hover:text-blue-800 underline">Read more...</a>
+            </section>
+
+            <section class="bg-white p-6 rounded-lg shadow border border-gray-200">
+                <h2 class="text-2xl font-bold text-blue-800 mb-4 border-b-2 border-red-500 pb-2 inline-block">Photos</h2>
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                    <div class="bg-gray-200 h-32 rounded flex items-center justify-center text-gray-500"><i class="fa-solid fa-image text-3xl"></i></div>
+                    <div class="bg-gray-200 h-32 rounded flex items-center justify-center text-gray-500"><i class="fa-solid fa-image text-3xl"></i></div>
+                    <div class="bg-gray-200 h-32 rounded flex items-center justify-center text-gray-500"><i class="fa-solid fa-image text-3xl"></i></div>
+                </div>
+            </section>
+        </div>
+
+        <aside class="w-full md:w-1/3 space-y-8">
+            <div class="bg-white p-6 rounded-lg shadow border border-gray-200 border-t-4 border-t-red-600">
+                <h3 class="text-xl font-bold text-gray-800 mb-4 flex items-center">
+                    <i class="fa-solid fa-bell text-red-600 mr-2"></i> नवीन सूचानाएं
+                </h3>
+                <div class="bg-gray-50 p-4 border border-gray-100 h-64 overflow-y-auto rounded shadow-inner">
+                    <marquee direction="up" scrollamount="2" class="h-full">
+                        <ul class="space-y-4 text-sm text-blue-800 font-medium">
+                            <li class="border-b pb-2 hover:text-red-600 cursor-pointer">नवीनतम बैठक और निर्णय की जानकारी।</li>
+                            <li class="border-b pb-2 hover:text-red-600 cursor-pointer">कर्मचारी कल्याण से जुड़ी नई सूचनाएं।</li>
+                            <li class="border-b pb-2 hover:text-red-600 cursor-pointer">आगामी कार्यक्रमों की रूपरेखा।</li>
+                        </ul>
+                    </marquee>
+                </div>
+            </div>
+
+            <div class="bg-blue-50 p-6 rounded-lg shadow border border-blue-200">
+                <h3 class="text-lg font-bold text-blue-800 mb-2">संपर्क (Contact)</h3>
+                <p class="text-gray-700 flex items-center">
+                    <i class="fa-solid fa-envelope text-blue-600 mr-2"></i> 
+                    <a href="mailto:upitien@gmail.com" class="hover:underline">upitien@gmail.com</a>
+                </p>
+            </div>
+        </aside>
+
+    </main>
+
+    <footer class="bg-gray-900 text-gray-300 py-8 border-t-4 border-blue-700 mt-auto">
+        <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
+            
+            <div>
+                <h4 class="text-white text-lg font-bold mb-4">UPITI Employees Association</h4>
+                <p class="text-sm">राज्य कर्मचारी संयुक्त परिषद, उत्तर प्रदेश से संबद्ध एक प्रमुख कर्मचारी संगठन।</p>
+            </div>
+
+            <div class="flex flex-col items-center md:items-start">
+                <h4 class="text-white text-lg font-bold mb-4">Connect With Us</h4>
+                <div class="flex space-x-4">
+                    <a href="#" class="w-10 h-10 bg-blue-600 text-white flex items-center justify-center rounded-full hover:bg-blue-500 transition shadow">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="w-10 h-10 bg-sky-500 text-white flex items-center justify-center rounded-full hover:bg-sky-400 transition shadow">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
+                    <a href="#" class="w-10 h-10 bg-red-600 text-white flex items-center justify-center rounded-full hover:bg-red-500 transition shadow">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="text-center md:text-right">
+                <h4 class="text-white text-lg font-bold mb-4">Visitor Statistics</h4>
+                <div class="inline-block bg-gray-800 border border-gray-700 px-4 py-2 rounded text-xl font-mono text-green-400 tracking-widest shadow-inner mb-2">
+                    211131
+                </div>
+                <br>
+                <div class="inline-block bg-gray-800 border border-gray-700 px-4 py-2 rounded text-xl font-mono text-green-400 tracking-widest shadow-inner">
+                    0000000
+                </div>
+            </div>
+        </div>
+        
+        <div class="mt-8 pt-4 border-t border-gray-800 text-center text-xs text-gray-500">
+            &copy; 2026 UTTAR Pradesh Industrial Training Institute Employees Association. All rights reserved.
+        </div>
+    </footer>
+
+</body>
+</html>
