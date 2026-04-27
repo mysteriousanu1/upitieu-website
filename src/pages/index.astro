@@ -7,47 +7,38 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        /* Force images to maintain their aspect ratio without breaking layout */
-        img { max-width: 100%; height: auto; }
-    </style>
 </head>
-<body class="bg-gray-50 text-gray-800 font-sans min-h-screen">
+<body class="bg-gray-50 text-gray-800">
 
-    <header class="bg-white shadow-md border-b-4 border-blue-700">
-        <div class="max-w-7xl mx-auto px-4 py-4 flex flex-col md:flex-row items-center justify-between">
-            <div class="w-24 md:w-32 flex-shrink-0">
-                <img src="logo.png" alt="UPITI Logo" class="object-contain">
+    <header class="w-full bg-white border-b-4 border-blue-700 shadow-md">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+            <div class="w-20 md:w-32 flex-shrink-0">
+                <img src="logo.png" alt="Logo" class="w-full h-auto object-contain">
             </div>
             
-            <div class="text-center flex-1 px-4 py-2">
-                <h1 class="text-2xl md:text-4xl text-red-600 font-bold mb-1">उत्तर प्रदेश औद्योगिक प्रशिक्षण संस्थान कर्मचारी संघ</h1>
-                <h2 class="text-lg md:text-xl font-extrabold text-blue-400 mb-1">UTTAR Pradesh Industrial Training Institute Employees Association.</h2>
-                <p class="text-xs md:text-sm text-gray-600 font-semibold uppercase tracking-wide">सम्बद्ध: राज्य कर्मचारी संयुक्त परिषद, उत्तर प्रदेश</p>
+            <div class="flex-1 text-center px-4">
+                <h1 class="text-xl md:text-3xl font-bold text-red-600">उत्तर प्रदेश औद्योगिक प्रशिक्षण संस्थान कर्मचारी संघ</h1>
+                <h2 class="text-xs md:text-lg font-bold text-blue-500">UTTAR Pradesh Industrial Training Institute Employees Association.</h2>
             </div>
 
-            <div class="w-24 md:w-32 flex-shrink-0">
-                <img src="logo2.png" alt="Second Logo" class="object-contain">
+            <div class="w-20 md:w-32 flex-shrink-0">
+                <img src="logo2.png" alt="Logo" class="w-full h-auto object-contain">
             </div>
         </div>
     </header>
 
-    <nav class="bg-blue-800 text-white shadow-lg sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-4">
-            <ul class="flex flex-wrap items-center justify-center space-x-2 md:space-x-6 py-3 text-sm font-medium">
-                <li><a href="#" class="hover:bg-blue-700 px-3 py-2 rounded transition">मुख्य पृष्ठ</a></li>
-                <li><a href="#" class="hover:bg-blue-700 px-3 py-2 rounded transition">गैलरी</a></li>
-                <li><a href="#" class="hover:bg-blue-700 px-3 py-2 rounded transition">सम्पर्क सूत्र</a></li>
-            </ul>
+    <nav class="w-full bg-blue-800 text-white">
+        <div class="max-w-6xl mx-auto px-4 py-3 text-center">
+            <span class="font-bold">Navigation Menu</span>
         </div>
     </nav>
 
-    <div class="max-w-7xl mx-auto px-4 mt-6">
+    <div class="max-w-6xl mx-auto px-4 mt-6">
         <div x-data="{ activeSlide: 1 }" 
              x-init="setInterval(() => { activeSlide = activeSlide === 5 ? 1 : activeSlide + 1 }, 5000)" 
              class="relative w-full overflow-hidden shadow-lg rounded-xl border border-gray-200">
             
-            <div class="relative w-full aspect-[21/6]">
+            <div class="relative w-full aspect-[21/7]">
                 <div x-show="activeSlide === 1" class="absolute inset-0"><img src="slide-1.jpg" class="w-full h-full object-cover"></div>
                 <div x-show="activeSlide === 2" class="absolute inset-0"><img src="slide-2.jpg" class="w-full h-full object-cover"></div>
                 <div x-show="activeSlide === 3" class="absolute inset-0"><img src="slide-3.jpg" class="w-full h-full object-cover"></div>
@@ -57,18 +48,11 @@
         </div>
     </div>
 
-    <main class="max-w-7xl mx-auto px-4 py-8 grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div class="md:col-span-2">
-            <section class="bg-white p-6 rounded-lg shadow border border-gray-200">
-                <h2 class="text-2xl font-bold text-blue-800 mb-4 border-b-2 border-red-500 pb-2">परिचय (Introduction)</h2>
-                <p>Welcome to the portal...</p>
-            </section>
-        </div>
-        <aside>
-            <div class="bg-white p-6 rounded-lg shadow border-t-4 border-t-red-600">
-                <h3 class="font-bold text-xl">नवीन सूचानाएं</h3>
-            </div>
-        </aside>
+    <main class="max-w-6xl mx-auto px-4 py-8">
+        <section class="bg-white p-6 rounded-lg shadow border border-gray-200">
+            <h2 class="text-2xl font-bold text-blue-800 mb-4 border-b-2 border-red-500 inline-block">परिचय (Introduction)</h2>
+            <p>Welcome to the portal...</p>
+        </section>
     </main>
 
 </body>
