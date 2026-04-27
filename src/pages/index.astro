@@ -61,35 +61,54 @@
         </div>
     </section>
 
-    <main class="container mx-auto px-4 py-8 grid grid-cols-1 md:grid-cols-3 gap-8">
+    <main class="container mx-auto px-4 py-8 space-y-8">
         
-        <section class="bg-white p-6 rounded-lg shadow border border-gray-200 flex flex-col gap-8 items-start md:col-span-2">
-            <div class="flex-1">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <section class="bg-white p-6 rounded-lg shadow border border-gray-200">
                 <h2 class="text-2xl font-bold text-blue-800 mb-4 border-b-2 border-red-500 pb-2 inline-block">परिचय (Introduction)</h2>
                 <p class="text-gray-700 leading-relaxed mb-4">
                     उत्तर प्रदेश औद्योगिक प्रशिक्षण संस्थान कर्मचारी संघ में आपका स्वागत है। यह संगठन कर्मचारियों के हितों और अधिकारों की रक्षा के लिए समर्पित है...
                 </p>
                 <a href="#" class="text-blue-600 font-semibold hover:text-blue-800 underline">Read more...</a>
-            </div>
-            <div class="w-full md:w-64 flex-shrink-0">
-                <img src="VIVEK.jpg" alt="Profile Photo" class="w-full h-auto rounded-lg shadow-md object-cover">
-            </div>
-        </section>
+            </section>
+            <section class="bg-white p-6 rounded-lg shadow border border-gray-200 flex items-center justify-center">
+                <img src="VIVEK.jpg" alt="Profile Photo" class="w-full max-w-sm h-auto rounded-lg shadow-md object-cover">
+            </section>
+        </div>
 
-        <section class="bg-white p-6 rounded-lg shadow border border-gray-200 border-t-4 border-t-red-600">
-            <h3 class="text-xl font-bold text-gray-800 mb-4 flex items-center">
-                <i class="fa-solid fa-bell text-red-600 mr-2"></i> नवीन सूचानाएं
-            </h3>
-            <div class="bg-gray-50 p-4 border border-gray-100 h-64 overflow-y-auto rounded shadow-inner">
-                <marquee direction="up" scrollamount="2" class="h-full">
-                    <ul class="space-y-4 text-sm text-blue-800 font-medium">
-                        <li class="border-b pb-2 hover:text-red-600 cursor-pointer">नवीनतम बैठक और निर्णय की जानकारी।</li>
-                        <li class="border-b pb-2 hover:text-red-600 cursor-pointer">कर्मचारी कल्याण से जुड़ी नई सूचनाएं।</li>
-                        <li class="border-b pb-2 hover:text-red-600 cursor-pointer">आगामी कार्यक्रमों की रूपरेखा।</li>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <section class="bg-white p-6 rounded-lg shadow border border-gray-200 border-t-4 border-t-red-600">
+                <h3 class="text-xl font-bold text-gray-800 mb-4 flex items-center">
+                    <i class="fa-solid fa-bell text-red-600 mr-2"></i> नवीनतम सूचनाएं
+                </h3>
+                <div class="bg-gray-50 p-4 h-48 overflow-y-auto rounded shadow-inner text-sm text-blue-800">
+                    <ul class="space-y-2">
+                        <li class="border-b pb-1 hover:text-red-600 cursor-pointer">नवीनतम बैठक और निर्णय।</li>
+                        <li class="border-b pb-1 hover:text-red-600 cursor-pointer">कर्मचारी कल्याण नई सूचना।</li>
                     </ul>
-                </marquee>
-            </div>
-        </section>
+                </div>
+            </section>
+            <section class="bg-white p-6 rounded-lg shadow border border-gray-200 border-t-4 border-t-blue-600">
+                <h3 class="text-xl font-bold text-gray-800 mb-4 flex items-center">
+                    <i class="fa-solid fa-file-pdf text-blue-600 mr-2"></i> शासनादेश
+                </h3>
+                <div class="bg-gray-50 p-4 h-48 overflow-y-auto rounded shadow-inner text-sm text-blue-800">
+                    <ul class="space-y-2">
+                        <li class="border-b pb-1 hover:text-red-600 cursor-pointer">नवीनतम शासनादेश डाउनलोड करें।</li>
+                    </ul>
+                </div>
+            </section>
+            <section class="bg-white p-6 rounded-lg shadow border border-gray-200 border-t-4 border-t-green-600">
+                <h3 class="text-xl font-bold text-gray-800 mb-4 flex items-center">
+                    <i class="fa-solid fa-calendar-days text-green-600 mr-2"></i> आगामी कार्यक्रम
+                </h3>
+                <div class="bg-gray-50 p-4 h-48 overflow-y-auto rounded shadow-inner text-sm text-blue-800">
+                    <ul class="space-y-2">
+                        <li class="border-b pb-1 hover:text-red-600 cursor-pointer">आगामी कार्यक्रमों की रूपरेखा।</li>
+                    </ul>
+                </div>
+            </section>
+        </div>
 
         <div class="bg-blue-50 p-6 rounded-lg shadow border border-blue-200">
             <h3 class="text-lg font-bold text-blue-800 mb-2">संपर्क (Contact)</h3>
