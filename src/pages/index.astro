@@ -62,39 +62,39 @@
                 <a href="#" class="text-blue-600 font-semibold hover:text-blue-800 underline">Read more...</a>
             </section>
 
-           <div class="mt-8">
-    <h2 class="text-3xl font-bold text-blue-900 mb-6 border-l-4 border-red-600 pl-4">Featured Achievements</h2>
+           <div x-data="{ activeSlide: 1 }" 
+     x-init="setInterval(() => { activeSlide = activeSlide === 5 ? 1 : activeSlide + 1 }, 5000)" 
+     class="relative w-full overflow-hidden shadow-lg">
     
-    <div class="flex space-x-6 overflow-x-auto pb-6 snap-x snap-mandatory scroll-smooth scrollbar-hide">
+    <div class="relative w-full aspect-[21/7] md:aspect-[21/6]">
         
-        <div class="flex-none w-72 bg-white rounded-xl shadow-lg border border-gray-100 p-4 snap-start transform hover:scale-105 transition-transform duration-300">
-            <img src="slide-1.jpg" alt="Topper 1" class="w-full h-48 object-cover rounded-lg mb-4">
-            <h3 class="font-bold text-lg text-gray-800">Student Name</h3>
-            <p class="text-sm text-gray-600">Trade: Electrician</p>
-            <p class="text-xs text-blue-600 font-semibold mt-2">Rank: 1st Place</p>
-        </div>
-
-        <div class="flex-none w-72 bg-white rounded-xl shadow-lg border border-gray-100 p-4 snap-start transform hover:scale-105 transition-transform duration-300">
-            <img src="slide-2.jpg" alt="Topper 2" class="w-full h-48 object-cover rounded-lg mb-4">
-            <h3 class="font-bold text-lg text-gray-800">Student Name</h3>
-            <p class="text-sm text-gray-600">Trade: Fitter</p>
-            <p class="text-xs text-blue-600 font-semibold mt-2">Rank: 2nd Place</p>
-        </div>
-
-        <div class="flex-none w-72 bg-white rounded-xl shadow-lg border border-gray-100 p-4 snap-start transform hover:scale-105 transition-transform duration-300">
-            <img src="slide-3.jpg" alt="Topper 3" class="w-full h-48 object-cover rounded-lg mb-4">
-            <h3 class="font-bold text-lg text-gray-800">Student Name</h3>
-            <p class="text-sm text-gray-600">Trade: Computer Application</p>
-            <p class="text-xs text-blue-600 font-semibold mt-2">Rank: 3rd Place</p>
-        </div>
-
-        <div class="flex-none w-72 bg-white rounded-xl shadow-lg border border-gray-100 p-4 snap-start transform hover:scale-105 transition-transform duration-300">
-            <img src="slide-4.jpg" alt="Topper 4" class="w-full h-48 object-cover rounded-lg mb-4">
-            <h3 class="font-bold text-lg text-gray-800">Student Name</h3>
-            <p class="text-sm text-gray-600">Trade: Welder</p>
-            <p class="text-xs text-blue-600 font-semibold mt-2">Rank: 4th Place</p>
+        <div x-show="activeSlide === 1" x-transition.opacity.duration.1000ms class="absolute inset-0">
+            <img src="slide-1.jpg" alt="Banner 1" class="w-full h-full object-cover">
         </div>
         
+        <div x-show="activeSlide === 2" x-transition.opacity.duration.1000ms class="absolute inset-0">
+            <img src="slide-2.jpg" alt="Banner 2" class="w-full h-full object-cover">
+        </div>
+        
+        <div x-show="activeSlide === 3" x-transition.opacity.duration.1000ms class="absolute inset-0">
+            <img src="slide-3.jpg" alt="Banner 3" class="w-full h-full object-cover">
+        </div>
+        
+        <div x-show="activeSlide === 4" x-transition.opacity.duration.1000ms class="absolute inset-0">
+            <img src="slide-4.jpg" alt="Banner 4" class="w-full h-full object-cover">
+        </div>
+        
+        <div x-show="activeSlide === 5" x-transition.opacity.duration.1000ms class="absolute inset-0">
+            <img src="slide-5.jpg" alt="Banner 5" class="w-full h-full object-cover">
+        </div>
+
+        <div class="absolute bottom-4 left-0 right-0 flex justify-center gap-3">
+            <button @click="activeSlide = 1" :class="activeSlide === 1 ? 'bg-white scale-125' : 'bg-white/50'" class="w-3 h-3 rounded-full transition-all"></button>
+            <button @click="activeSlide = 2" :class="activeSlide === 2 ? 'bg-white scale-125' : 'bg-white/50'" class="w-3 h-3 rounded-full transition-all"></button>
+            <button @click="activeSlide = 3" :class="activeSlide === 3 ? 'bg-white scale-125' : 'bg-white/50'" class="w-3 h-3 rounded-full transition-all"></button>
+            <button @click="activeSlide = 4" :class="activeSlide === 4 ? 'bg-white scale-125' : 'bg-white/50'" class="w-3 h-3 rounded-full transition-all"></button>
+            <button @click="activeSlide = 5" :class="activeSlide === 5 ? 'bg-white scale-125' : 'bg-white/50'" class="w-3 h-3 rounded-full transition-all"></button>
+        </div>
     </div>
 </div>
         <aside class="w-full md:w-1/3 space-y-8">
