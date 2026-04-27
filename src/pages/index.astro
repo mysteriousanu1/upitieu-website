@@ -1,38 +1,36 @@
 <!DOCTYPE html>
 <html lang="hi">
 <head>
-    <style>
-        .scrollbar-hide::-webkit-scrollbar { display: none; }
-        .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
-    </style>
-    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UPITI Employees Association</title>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body class="bg-gray-50 text-gray-800 font-sans flex flex-col min-h-screen">
+<body class="bg-gray-50 text-gray-800 font-sans min-h-screen flex flex-col">
 
-    <header class="bg-white shadow-md border-b-4 border-blue-700">
-        <div class="container mx-auto px-4 py-4 flex flex-col md:flex-row items-center justify-between">
-            <div class="flex items-center mb-4 md:mb-0">
+    <header class="bg-white shadow-md border-b-4 border-blue-700 w-full">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex flex-col md:flex-row items-center justify-between">
+            <div class="flex-shrink-0 mb-4 md:mb-0">
                 <img src="logo.png" alt="UPITI Logo" class="h-32 w-auto object-contain">
             </div>
+            
             <div class="text-center flex-1 px-4">
-                <h1 class="text-5xl text-red-600 font-bold mb-2">उत्तर प्रदेश औद्योगिक प्रशिक्षण संस्थान कर्मचारी संघ</h1>
-                <h2 class="text-2xl md:text-3xl font-extrabold text-blue-400 mb-1">UTTAR Pradesh Industrial Training Institute Employees Association.</h2>
+                <h1 class="text-3xl md:text-5xl text-red-600 font-bold mb-2">उत्तर प्रदेश औद्योगिक प्रशिक्षण संस्थान कर्मचारी संघ</h1>
+                <h2 class="text-xl md:text-2xl font-extrabold text-blue-400 mb-1">UTTAR Pradesh Industrial Training Institute Employees Association.</h2>
                 <p class="text-sm md:text-base text-gray-600 font-semibold uppercase tracking-wide">सम्बद्ध: राज्य कर्मचारी संयुक्त परिषद, उत्तर प्रदेश</p>
             </div>
-            <div class="flex items-center mt-4 md:mt-0">
+
+            <div class="flex-shrink-0 mt-4 md:mt-0">
                 <img src="logo2.png" alt="Second Logo" class="h-32 w-auto object-contain">
             </div>
         </div>
     </header>
 
-    <nav class="bg-blue-800 text-white shadow-lg sticky top-0 z-50">
-        <div class="container mx-auto px-4">
-            <ul class="flex flex-wrap items-center justify-center md:justify-start space-x-1 md:space-x-6 py-3 text-sm md:text-base font-medium">
+    <nav class="bg-blue-800 text-white shadow-lg sticky top-0 z-50 w-full">
+        <div class="max-w-7xl mx-auto px-4">
+            <ul class="flex flex-wrap items-center justify-center space-x-2 md:space-x-6 py-3 text-sm md:text-base font-medium">
                 <li><a href="#" class="hover:bg-blue-700 px-3 py-2 rounded transition">मुख्य पृष्ठ</a></li>
                 <li><a href="#" class="hover:bg-blue-700 px-3 py-2 rounded transition">हमारे बारे में</a></li>
                 <li><a href="#" class="hover:bg-blue-700 px-3 py-2 rounded transition">संगठन संरचना</a></li>
@@ -44,67 +42,46 @@
         </div>
     </nav>
 
-    <div x-data="{ activeSlide: 1 }" 
-         x-init="setInterval(() => { activeSlide = activeSlide === 5 ? 1 : activeSlide + 1 }, 5000)" 
-         class="relative w-full overflow-hidden shadow-lg mb-8">
-        
-        <div class="relative w-full aspect-[21/7] md:aspect-[21/6]">
-            <div x-show="activeSlide === 1" x-transition.opacity.duration.1000ms class="absolute inset-0">
-                <img src="slide-1.jpg" alt="Banner 1" class="w-full h-full object-cover">
-            </div>
-            <div x-show="activeSlide === 2" x-transition.opacity.duration.1000ms class="absolute inset-0">
-                <img src="slide-2.jpg" alt="Banner 2" class="w-full h-full object-cover">
-            </div>
-            <div x-show="activeSlide === 3" x-transition.opacity.duration.1000ms class="absolute inset-0">
-                <img src="slide-3.jpg" alt="Banner 3" class="w-full h-full object-cover">
-            </div>
-            <div x-show="activeSlide === 4" x-transition.opacity.duration.1000ms class="absolute inset-0">
-                <img src="slide-4.jpg" alt="Banner 4" class="w-full h-full object-cover">
-            </div>
-            <div x-show="activeSlide === 5" x-transition.opacity.duration.1000ms class="absolute inset-0">
-                <img src="slide-5.jpg" alt="Banner 5" class="w-full h-full object-cover">
-            </div>
-
-            <div class="absolute bottom-4 left-0 right-0 flex justify-center gap-3">
-                <button @click="activeSlide = 1" :class="activeSlide === 1 ? 'bg-white scale-125' : 'bg-white/50'" class="w-3 h-3 rounded-full transition-all"></button>
-                <button @click="activeSlide = 2" :class="activeSlide === 2 ? 'bg-white scale-125' : 'bg-white/50'" class="w-3 h-3 rounded-full transition-all"></button>
-                <button @click="activeSlide = 3" :class="activeSlide === 3 ? 'bg-white scale-125' : 'bg-white/50'" class="w-3 h-3 rounded-full transition-all"></button>
-                <button @click="activeSlide = 4" :class="activeSlide === 4 ? 'bg-white scale-125' : 'bg-white/50'" class="w-3 h-3 rounded-full transition-all"></button>
-                <button @click="activeSlide = 5" :class="activeSlide === 5 ? 'bg-white scale-125' : 'bg-white/50'" class="w-3 h-3 rounded-full transition-all"></button>
+    <div class="max-w-7xl mx-auto px-4 my-8">
+        <div x-data="{ activeSlide: 1 }" 
+             x-init="setInterval(() => { activeSlide = activeSlide === 5 ? 1 : activeSlide + 1 }, 5000)" 
+             class="relative w-full overflow-hidden shadow-lg rounded-xl">
+            
+            <div class="relative w-full aspect-[21/6]">
+                <div x-show="activeSlide === 1" x-transition.opacity.duration.1000ms class="absolute inset-0"><img src="slide-1.jpg" alt="1" class="w-full h-full object-cover"></div>
+                <div x-show="activeSlide === 2" x-transition.opacity.duration.1000ms class="absolute inset-0"><img src="slide-2.jpg" alt="2" class="w-full h-full object-cover"></div>
+                <div x-show="activeSlide === 3" x-transition.opacity.duration.1000ms class="absolute inset-0"><img src="slide-3.jpg" alt="3" class="w-full h-full object-cover"></div>
+                <div x-show="activeSlide === 4" x-transition.opacity.duration.1000ms class="absolute inset-0"><img src="slide-4.jpg" alt="4" class="w-full h-full object-cover"></div>
+                <div x-show="activeSlide === 5" x-transition.opacity.duration.1000ms class="absolute inset-0"><img src="slide-5.jpg" alt="5" class="w-full h-full object-cover"></div>
             </div>
         </div>
     </div>
 
-    <main class="container mx-auto px-4 py-8 flex-grow flex flex-col md:flex-row gap-8">
+    <main class="max-w-7xl mx-auto px-4 py-8 flex flex-col md:flex-row gap-8 w-full">
         <div class="w-full md:w-2/3 space-y-8">
             <section class="bg-white p-6 rounded-lg shadow border border-gray-200">
                 <h2 class="text-2xl font-bold text-blue-800 mb-4 border-b-2 border-red-500 pb-2 inline-block">परिचय (Introduction)</h2>
-                <p class="text-gray-700 leading-relaxed mb-4">
-                    उत्तर प्रदेश औद्योगिक प्रशिक्षण संस्थान कर्मचारी संघ में आपका स्वागत है। यह संगठन कर्मचारियों के हितों और अधिकारों की रक्षा के लिए समर्पित है...
-                </p>
-                <a href="#" class="text-blue-600 font-semibold hover:text-blue-800 underline">Read more...</a>
+                <p class="text-gray-700 leading-relaxed">उत्तर प्रदेश औद्योगिक प्रशिक्षण संस्थान कर्मचारी संघ में आपका स्वागत है। यह संगठन कर्मचारियों के हितों और अधिकारों की रक्षा के लिए समर्पित है...</p>
             </section>
         </div>
 
         <aside class="w-full md:w-1/3 space-y-8">
             <div class="bg-white p-6 rounded-lg shadow border border-gray-200 border-t-4 border-t-red-600">
-                <h3 class="text-xl font-bold text-gray-800 mb-4 flex items-center">
-                    <i class="fa-solid fa-bell text-red-600 mr-2"></i> नवीन सूचानाएं
-                </h3>
-                <div class="bg-gray-50 p-4 border border-gray-100 h-64 overflow-y-auto rounded shadow-inner">
-                     <ul class="space-y-4 text-sm text-blue-800 font-medium">
-                        <li class="border-b pb-2 hover:text-red-600 cursor-pointer">नवीनतम बैठक और निर्णय की जानकारी।</li>
-                        <li class="border-b pb-2 hover:text-red-600 cursor-pointer">कर्मचारी कल्याण से जुड़ी नई सूचनाएं।</li>
-                        <li class="border-b pb-2 hover:text-red-600 cursor-pointer">आगामी कार्यक्रमों की रूपरेखा।</li>
+                <h3 class="text-xl font-bold text-gray-800 mb-4"><i class="fa-solid fa-bell text-red-600 mr-2"></i> नवीन सूचानाएं</h3>
+                <div class="bg-gray-50 p-4 h-64 overflow-y-auto rounded shadow-inner">
+                    <ul class="space-y-4 text-sm text-blue-800 font-medium">
+                        <li>नवीनतम बैठक और निर्णय की जानकारी।</li>
+                        <li>कर्मचारी कल्याण से जुड़ी नई सूचनाएं।</li>
+                        <li>आगामी कार्यक्रमों की रूपरेखा।</li>
                     </ul>
                 </div>
             </div>
         </aside>
     </main>
 
-    <footer class="bg-gray-900 text-gray-300 py-8 border-t-4 border-blue-700 mt-auto">
-        <div class="container mx-auto px-4 text-center">
-            <p>&copy; 2026 UTTAR Pradesh Industrial Training Institute Employees Association. All rights reserved.</p>
+    <footer class="bg-gray-900 text-gray-300 py-8 border-t-4 border-blue-700 mt-auto w-full">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p>&copy; 2026 UTTAR Pradesh Industrial Training Institute Employees Association.</p>
         </div>
     </footer>
 
