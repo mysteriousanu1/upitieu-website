@@ -1,0 +1,179 @@
+<script is:inline src="https://cdn.tailwindcss.com"></script>
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>गैलरी - UPITI Employees Association</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans flex flex-col min-h-screen" x-data="{ open: false, imageSrc: '' }">
+
+    <header class="bg-white shadow-md border-b-4 border-blue-700">
+        <div class="container mx-auto px-4 py-4 flex flex-col md:flex-row items-center justify-center md:justify-between">
+             <div class="flex items-center mb-4 md:mb-0">
+                <img src="/logo.png" alt="UPITI Logo" class="h-32 w-auto object-contain">
+            </div>
+            <div class="text-center flex-1 px-4">
+                <h1 class="text-5xl text-red-600 font-bold mb-2">उत्तर प्रदेश औद्योगिक प्रशिक्षण संस्थान कर्मचारी संघ</h1>
+                <h2 class="text-2xl md:text-3xl font-extrabold text-blue-400 mb-1">UTTAR Pradesh Industrial Training Institute Employees Association.</h2>
+                <p class="text-sm md:text-base text-gray-600 font-semibold uppercase tracking-wide">(उ0 प्र0 शासन, श्रम अनुभाग-6, संख्या 482/36-6-207/71 लखनऊ दिनांक 1 मार्च, 1974 द्वारा मान्यता प्राप्त)</p>
+                <p class="text-sm md:text-base text-gray-600 font-semibold uppercase tracking-wide">सम्बद्ध: राज्य कर्मचारी संयुक्त परिषद, उत्तर प्रदेश</p>
+            </div>
+        </div>
+    </header>
+
+    <nav class="bg-blue-800 text-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <ul class="flex flex-wrap items-center justify-center md:justify-start space-x-1 md:space-x-6 py-3 text-sm md:text-base font-medium">
+                <li><a href="/" class="hover:bg-blue-700 px-3 py-2 rounded transition">मुख्य पृष्ठ</a></li>
+                <li><a href="/about" class="hover:bg-blue-700 px-3 py-2 rounded transition">हमारे बारे में</a></li>
+                <li><a href="/organization" class="hover:bg-blue-700 px-3 py-2 rounded transition">संगठन संरचना</a></li>
+                <li><a href="/events" class="hover:bg-blue-700 px-3 py-2 rounded transition">घटनाक्रम</a></li>
+                <li><a href="/gallery" class="bg-blue-900 px-3 py-2 rounded transition">गैलरी</a></li>
+                <li><a href="/orders" class="hover:bg-blue-700 px-3 py-2 rounded transition">शासनादेश / आदेश</a></li>
+                <li><a href="#" class="hover:bg-blue-700 px-3 py-2 rounded transition">सम्पर्क सूत्र</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container mx-auto px-4 py-12 flex-grow">
+        
+        <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold text-blue-800 border-b-4 border-red-500 inline-block pb-2">गैलरी (Gallery)</h2>
+            <p class="text-gray-600 mt-4 max-w-2xl mx-auto text-lg">संघ की प्रमुख बैठकों, आंदोलनों और सांस्कृतिक आयोजनों की झलकियाँ</p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            
+            <div class="group relative cursor-pointer overflow-hidden rounded-xl shadow-lg bg-gray-200 aspect-video" 
+                 @click="open = true; imageSrc = '/vivek.png'">
+                <img src="/vivek.png" alt="Event 1" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+                    <i class="fa-solid fa-magnifying-glass-plus text-white text-3xl"></i>
+                </div>
+                <div class="absolute bottom-0 w-full bg-gradient-to-t from-black to-transparent p-4">
+                    <p class="text-white text-sm font-bold">प्रांतीय बैठक - लखनऊ</p>
+                </div>
+            </div>
+
+            <div class="group relative cursor-pointer overflow-hidden rounded-xl shadow-lg bg-gray-200 aspect-video" 
+                 @click="open = true; imageSrc = 'https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=1200'">
+                <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=600" alt="Meeting" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+                    <i class="fa-solid fa-magnifying-glass-plus text-white text-3xl"></i>
+                </div>
+                <div class="absolute bottom-0 w-full bg-gradient-to-t from-black to-transparent p-4">
+                    <p class="text-white text-sm font-bold">कार्यकारिणी संवाद</p>
+                </div>
+            </div>
+
+            <div class="group relative cursor-pointer overflow-hidden rounded-xl shadow-lg bg-gray-200 aspect-video" 
+                 @click="open = true; imageSrc = 'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1200'">
+                <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=600" alt="Discussion" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+                    <i class="fa-solid fa-magnifying-glass-plus text-white text-3xl"></i>
+                </div>
+                <div class="absolute bottom-0 w-full bg-gradient-to-t from-black to-transparent p-4">
+                    <p class="text-white text-sm font-bold">जिला शाखा अधिवेशन</p>
+                </div>
+            </div>
+
+            <div class="group relative cursor-pointer overflow-hidden rounded-xl shadow-lg bg-gray-200 aspect-video" 
+                 @click="open = true; imageSrc = 'https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1200'">
+                <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=600" alt="Presentation" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+                    <i class="fa-solid fa-magnifying-glass-plus text-white text-3xl"></i>
+                </div>
+                <div class="absolute bottom-0 w-full bg-gradient-to-t from-black to-transparent p-4">
+                    <p class="text-white text-sm font-bold">तकनीकी कार्यशाला</p>
+                </div>
+            </div>
+
+            <div class="group relative cursor-pointer overflow-hidden rounded-xl shadow-lg bg-gray-200 aspect-video" 
+                 @click="open = true; imageSrc = 'https://images.unsplash.com/photo-1524178232363-1fb28f74b671?q=80&w=1200'">
+                <img src="https://images.unsplash.com/photo-1524178232363-1fb28f74b671?q=80&w=600" alt="Protest" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+                    <i class="fa-solid fa-magnifying-glass-plus text-white text-3xl"></i>
+                </div>
+                <div class="absolute bottom-0 w-full bg-gradient-to-t from-black to-transparent p-4">
+                    <p class="text-white text-sm font-bold">आंदोलन एवं प्रदर्शन</p>
+                </div>
+            </div>
+
+             <div class="group relative cursor-pointer overflow-hidden rounded-xl shadow-lg bg-gray-200 aspect-video" 
+                 @click="open = true; imageSrc = 'https://images.unsplash.com/photo-1540317580384-e5d43616b9aa?q=80&w=1200'">
+                <img src="https://images.unsplash.com/photo-1540317580384-e5d43616b9aa?q=80&w=600" alt="Award" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+                    <i class="fa-solid fa-magnifying-glass-plus text-white text-3xl"></i>
+                </div>
+                <div class="absolute bottom-0 w-full bg-gradient-to-t from-black to-transparent p-4">
+                    <p class="text-white text-sm font-bold">सम्मान समारोह</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="mt-16 bg-blue-50 p-6 rounded-lg border border-blue-200 text-center">
+            <p class="text-blue-800 font-medium">
+                <i class="fa-solid fa-info-circle mr-2"></i> 
+                यदि आपके पास संगठन के कार्यक्रमों की तस्वीरें हैं, तो कृपया उन्हें संघ के आधिकारिक ईमेल पर भेजें।
+            </p>
+        </div>
+    </main>
+
+    <template x-if="open">
+        <div class="fixed inset-0 z-[100] flex items-center justify-center bg-black bg-opacity-90 p-4"
+             @click.away="open = false"
+             x-transition:enter="transition ease-out duration-300"
+             x-transition:enter-start="opacity-0 scale-90"
+             x-transition:enter-end="opacity-100 scale-100">
+            
+            <button @click="open = false" class="absolute top-6 right-6 text-white text-4xl hover:text-red-500 transition">
+                <i class="fa-solid fa-times"></i>
+            </button>
+
+            <img :src="imageSrc" class="max-w-full max-h-[90vh] rounded-lg shadow-2xl border-2 border-white">
+        </div>
+    </template>
+
+    <footer class="bg-gray-900 text-gray-300 py-8 border-t-4 border-blue-700 mt-auto">
+        <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div>
+                <h4 class="text-white text-lg font-bold mb-4">UPITI Employees Association</h4>
+                <p class="text-sm">राज्य कर्मचारी संयुक्त परिषद, उत्तर प्रदेश से संबद्ध एक प्रमुख कर्मचारी संगठन।</p>
+            </div>
+            <div class="flex flex-col items-center md:items-start">
+                <h4 class="text-white text-lg font-bold mb-4">Connect With Us</h4>
+                <div class="flex space-x-4">
+                    <a href="#" class="w-10 h-10 bg-blue-600 text-white flex items-center justify-center rounded-full hover:bg-blue-500 transition shadow">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="w-10 h-10 bg-sky-500 text-white flex items-center justify-center rounded-full hover:bg-sky-400 transition shadow">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
+                    <a href="#" class="w-10 h-10 bg-red-600 text-white flex items-center justify-center rounded-full hover:bg-red-500 transition shadow">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="text-center md:text-right">
+                <h4 class="text-white text-lg font-bold mb-4">Visitor Statistics</h4>
+                <div class="inline-block bg-gray-800 border border-gray-700 px-4 py-2 rounded text-xl font-mono text-green-400 tracking-widest shadow-inner mb-2">
+                    211131
+                </div>
+                <br>
+                <div class="inline-block bg-gray-800 border border-gray-700 px-4 py-2 rounded text-xl font-mono text-green-400 tracking-widest shadow-inner">
+                    0000000
+                </div>
+            </div>
+        </div>
+        <div class="mt-8 pt-4 border-t border-gray-800 text-center text-xs text-gray-500">
+            &copy; 2026 UTTAR Pradesh Industrial Training Institute Employees Association. All rights reserved.
+        </div>
+    </footer>
+
+</body>
+</html>
