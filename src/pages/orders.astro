@@ -9,7 +9,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body class="bg-gray-50 text-gray-800 font-sans flex flex-col min-h-screen">
+<body class="bg-gray-50 text-gray-800 font-sans flex flex-col min-h-screen" x-data="{ activeTab: 'shashanadesh' }">
 
     <header class="bg-white shadow-md border-b-4 border-blue-700">
         <div class="container mx-auto px-4 py-4 flex flex-col md:flex-row items-center justify-center md:justify-between">
@@ -17,10 +17,10 @@
                 <img src="/logo.png" alt="UPITI Logo" class="h-32 w-auto object-contain">
             </div>
             <div class="text-center flex-1 px-4">
-                <h1 class="text-5xl text-red-600 font-bold mb-2">उत्तर प्रदेश औद्योगिक प्रशिक्षण संस्थान कर्मचारी संघ</h1>
-                <h2 class="text-2xl md:text-3xl font-extrabold text-blue-400 mb-1">UTTAR Pradesh Industrial Training Institute Employees Association.</h2>
-                <p class="text-sm md:text-base text-gray-600 font-semibold uppercase tracking-wide">(उ0 प्र0 शासन, श्रम अनुभाग-6, संख्या 482/36-6-207/71 लखनऊ दिनांक 1 मार्च, 1974 द्वारा मान्यता प्राप्त)</p>
-                <p class="text-sm md:text-base text-gray-600 font-semibold uppercase tracking-wide">सम्बद्ध: राज्य कर्मचारी संयुक्त परिषद, उत्तर प्रदेश</p>
+                <h1 class="text-3xl md:text-5xl text-red-600 font-bold mb-2">उत्तर प्रदेश औद्योगिक प्रशिक्षण संस्थान कर्मचारी संघ</h1>
+                <h2 class="text-xl md:text-3xl font-extrabold text-blue-400 mb-1">UTTAR Pradesh Industrial Training Institute Employees Association.</h2>
+                <p class="text-xs md:text-base text-gray-600 font-semibold uppercase tracking-wide">(उ0 प्र0 शासन, श्रम अनुभाग-6, संख्या 482/36-6-207/71 लखनऊ दिनांक 1 मार्च, 1974 द्वारा मान्यता प्राप्त)</p>
+                <p class="text-xs md:text-base text-gray-600 font-semibold uppercase tracking-wide">सम्बद्ध: राज्य कर्मचारी संयुक्त परिषद, उत्तर प्रदेश</p>
             </div>
         </div>
     </header>
@@ -29,22 +29,22 @@
         <div class="container mx-auto px-4">
             <ul class="flex flex-wrap items-center justify-center md:justify-start space-x-1 md:space-x-6 py-3 text-sm md:text-base font-medium">
                 <li><a href="/index" class="hover:bg-blue-700 px-3 py-2 rounded transition">मुख्य पृष्ठ</a></li>
-                <li><a href="/about" class="hover:bg-blue-700 px-3 py-2 rounded transition">हमारे बारे में</a><li>
+                <li><a href="/about" class="hover:bg-blue-700 px-3 py-2 rounded transition">हमारे बारे में</a></li>
                 <li><a href="/organization" class="hover:bg-blue-700 px-3 py-2 rounded transition">संगठन संरचना</a></li>
                 <li><a href="/events" class="hover:bg-blue-700 px-3 py-2 rounded transition">घटनाक्रम</a></li>
                 <li><a href="/gallery" class="hover:bg-blue-700 px-3 py-2 rounded transition">गैलरी</a></li>
-                <li><a href="/orders" class="hover:bg-blue-700 px-3 py-2 rounded transition">शासनादेश / आदेश</a></li>
+                <li><a href="/orders" class="hover:bg-blue-700 px-3 py-2 rounded transition border-b-2 border-white">शासनादेश / आदेश</a></li>
                 <li><a href="/contact" class="hover:bg-blue-700 px-3 py-2 rounded transition">सम्पर्क सूत्र</a></li>
             </ul>
         </div>
     </nav>
 
-    <main class="container mx-auto px-4 py-12 flex-grow">
+    <main class="container mx-auto px-4 py-8 flex-grow">
         
         <div class="mb-10 text-center md:text-left flex flex-col md:flex-row md:items-end justify-between border-b-2 border-gray-200 pb-4">
             <div>
                 <h2 class="text-3xl md:text-4xl font-bold text-blue-800 border-b-4 border-red-500 inline-block pb-2">शासनादेश / आदेश</h2>
-                <p class="text-gray-600 mt-2 text-lg">महत्वपूर्ण सरकारी आदेश, परिपत्र एवं सूचनाएं</p>
+                <p class="text-gray-600 mt-2 text-lg">महत्वपूर्ण सरकारी आदेश एवं निदेशालय सूचनाएं</p>
             </div>
             
             <div class="mt-4 md:mt-0 flex w-full md:w-auto">
@@ -53,6 +53,19 @@
                     <i class="fa-solid fa-search"></i>
                 </button>
             </div>
+        </div>
+
+        <div class="flex flex-col md:flex-row mb-6 bg-white shadow-sm rounded-lg overflow-hidden border border-gray-200">
+            <button @click="activeTab = 'shashanadesh'" 
+                :class="activeTab === 'shashanadesh' ? 'bg-blue-700 text-white' : 'bg-white text-gray-700 hover:bg-blue-50'"
+                class="flex-1 py-4 px-6 text-center font-bold text-lg transition duration-200 border-b-4 md:border-b-0 md:border-r border-gray-200">
+                <i class="fa-solid fa-building-columns mr-2"></i> शासनादेश
+            </button>
+            <button @click="activeTab = 'nideshalaya'" 
+                :class="activeTab === 'nideshalaya' ? 'bg-blue-700 text-white' : 'bg-white text-gray-700 hover:bg-blue-50'"
+                class="flex-1 py-4 px-6 text-center font-bold text-lg transition duration-200 border-b-4 md:border-b-0">
+                <i class="fa-solid fa-file-invoice mr-2"></i> निदेशालय आदेश
+            </button>
         </div>
 
         <div class="bg-white shadow-md rounded-lg overflow-hidden border border-gray-200">
@@ -64,64 +77,32 @@
                 <div class="col-span-2 text-center">डाउनलोड</div>
             </div>
 
-            <div class="divide-y divide-gray-200">
-                
+            <div x-show="activeTab === 'shashanadesh'" class="divide-y divide-gray-200">
                 <div class="grid grid-cols-1 md:grid-cols-12 gap-4 p-4 items-center hover:bg-blue-50 transition">
                     <div class="md:col-span-1 font-bold text-gray-500 md:text-center"><span class="md:hidden">क्र.सं: </span>1</div>
                     <div class="md:col-span-2 text-sm text-gray-600"><i class="fa-regular fa-calendar md:hidden mr-1"></i> 25 अप्रैल, 2026</div>
                     <div class="md:col-span-2 text-sm font-semibold text-gray-700"><span class="md:hidden text-gray-500 font-normal">संख्या: </span>UPITI/2026/04</div>
-                    <div class="md:col-span-5 text-gray-800 font-medium text-lg md:text-base">
-                        आईटीआई अनुदेशकों की पदोन्नति एवं वेतन विसंगति निवारण के संबंध में शासनादेश।
-                    </div>
+                    <div class="md:col-span-5 text-gray-800 font-medium text-lg md:text-base">आईटीआई अनुदेशकों की पदोन्नति एवं वेतन विसंगति निवारण के संबंध में शासनादेश।</div>
                     <div class="md:col-span-2 text-left md:text-center mt-2 md:mt-0">
                         <a href="#" class="inline-flex items-center justify-center bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700 transition shadow-sm text-sm">
                             <i class="fa-solid fa-file-pdf mr-2"></i> PDF (1.2 MB)
                         </a>
                     </div>
                 </div>
+            </div>
 
+            <div x-show="activeTab === 'nideshalaya'" class="divide-y divide-gray-200" x-cloak>
                 <div class="grid grid-cols-1 md:grid-cols-12 gap-4 p-4 items-center hover:bg-blue-50 transition">
-                    <div class="md:col-span-1 font-bold text-gray-500 md:text-center"><span class="md:hidden">क्र.सं: </span>2</div>
+                    <div class="md:col-span-1 font-bold text-gray-500 md:text-center"><span class="md:hidden">क्र.सं: </span>1</div>
                     <div class="md:col-span-2 text-sm text-gray-600"><i class="fa-regular fa-calendar md:hidden mr-1"></i> 10 मार्च, 2026</div>
-                    <div class="md:col-span-2 text-sm font-semibold text-gray-700"><span class="md:hidden text-gray-500 font-normal">संख्या: </span>GO-892/2026</div>
-                    <div class="md:col-span-5 text-gray-800 font-medium text-lg md:text-base">
-                        संस्थानों में ग्रीष्मकालीन अवकाश की घोषणा एवं प्रशासनिक दिशा-निर्देश।
-                    </div>
+                    <div class="md:col-span-2 text-sm font-semibold text-gray-700"><span class="md:hidden text-gray-500 font-normal">संख्या: </span>DIR/2026/92</div>
+                    <div class="md:col-span-5 text-gray-800 font-medium text-lg md:text-base">संस्थानों में ग्रीष्मकालीन अवकाश की घोषणा एवं प्रशासनिक दिशा-निर्देश।</div>
                     <div class="md:col-span-2 text-left md:text-center mt-2 md:mt-0">
                         <a href="#" class="inline-flex items-center justify-center bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700 transition shadow-sm text-sm">
                             <i class="fa-solid fa-file-pdf mr-2"></i> PDF (850 KB)
                         </a>
                     </div>
                 </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-12 gap-4 p-4 items-center hover:bg-blue-50 transition">
-                    <div class="md:col-span-1 font-bold text-gray-500 md:text-center"><span class="md:hidden">क्र.सं: </span>3</div>
-                    <div class="md:col-span-2 text-sm text-gray-600"><i class="fa-regular fa-calendar md:hidden mr-1"></i> 15 फरवरी, 2026</div>
-                    <div class="md:col-span-2 text-sm font-semibold text-gray-700"><span class="md:hidden text-gray-500 font-normal">संख्या: </span>CIR/02/2026</div>
-                    <div class="md:col-span-5 text-gray-800 font-medium text-lg md:text-base">
-                        राज्य कर्मचारी संयुक्त परिषद के चुनाव एवं अधिवेशन से संबंधित परिपत्र।
-                    </div>
-                    <div class="md:col-span-2 text-left md:text-center mt-2 md:mt-0">
-                        <a href="#" class="inline-flex items-center justify-center bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700 transition shadow-sm text-sm">
-                            <i class="fa-solid fa-file-pdf mr-2"></i> PDF (2.1 MB)
-                        </a>
-                    </div>
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-12 gap-4 p-4 items-center hover:bg-blue-50 transition">
-                    <div class="md:col-span-1 font-bold text-gray-500 md:text-center"><span class="md:hidden">क्र.सं: </span>4</div>
-                    <div class="md:col-span-2 text-sm text-gray-600"><i class="fa-regular fa-calendar md:hidden mr-1"></i> 05 जनवरी, 2026</div>
-                    <div class="md:col-span-2 text-sm font-semibold text-gray-700"><span class="md:hidden text-gray-500 font-normal">संख्या: </span>DGT-01/2026</div>
-                    <div class="md:col-span-5 text-gray-800 font-medium text-lg md:text-base">
-                        नई प्रशिक्षण नियमावली (Training Manual) एवं पाठ्यक्रम में संशोधन।
-                    </div>
-                    <div class="md:col-span-2 text-left md:text-center mt-2 md:mt-0">
-                        <a href="#" class="inline-flex items-center justify-center bg-gray-400 text-white px-4 py-2 rounded cursor-not-allowed shadow-sm text-sm" title="लिंक जल्द ही उपलब्ध होगा">
-                            <i class="fa-solid fa-clock mr-2"></i> अपलोड हो रहा है
-                        </a>
-                    </div>
-                </div>
-
             </div>
             
             <div class="bg-gray-50 p-4 border-t border-gray-200 flex justify-center">
@@ -129,7 +110,6 @@
                     <a href="#" class="px-3 py-1 rounded bg-white border border-gray-300 text-gray-500 hover:bg-gray-100"><i class="fa-solid fa-chevron-left"></i></a>
                     <a href="#" class="px-3 py-1 rounded bg-blue-700 text-white font-bold shadow">1</a>
                     <a href="#" class="px-3 py-1 rounded bg-white border border-gray-300 text-gray-700 hover:bg-blue-50">2</a>
-                    <a href="#" class="px-3 py-1 rounded bg-white border border-gray-300 text-gray-700 hover:bg-blue-50">3</a>
                     <a href="#" class="px-3 py-1 rounded bg-white border border-gray-300 text-gray-500 hover:bg-gray-100"><i class="fa-solid fa-chevron-right"></i></a>
                 </nav>
             </div>
@@ -162,16 +142,16 @@
                 <div class="inline-block bg-gray-800 border border-gray-700 px-4 py-2 rounded text-xl font-mono text-green-400 tracking-widest shadow-inner mb-2">
                     211131
                 </div>
-                <br>
-                <div class="inline-block bg-gray-800 border border-gray-700 px-4 py-2 rounded text-xl font-mono text-green-400 tracking-widest shadow-inner">
-                    0000000
-                </div>
             </div>
         </div>
         <div class="mt-8 pt-4 border-t border-gray-800 text-center text-xs text-gray-500">
             &copy; 2026 UTTAR Pradesh Industrial Training Institute Employees Association. All rights reserved.
         </div>
     </footer>
+
+    <style>
+        [x-cloak] { display: none !important; }
+    </style>
 
 </body>
 </html>
