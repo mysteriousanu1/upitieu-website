@@ -9,15 +9,19 @@
     <script is:inline src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* Custom scrollbar for the Mandal slider */
-        .mandal-slider::-webkit-scrollbar {
+        /* Custom scrollbar for the sliders */
+        .mandal-slider::-webkit-scrollbar, .zila-slider::-webkit-scrollbar {
             width: 5px;
         }
-        .mandal-slider::-webkit-scrollbar-track {
+        .mandal-slider::-webkit-scrollbar-track, .zila-slider::-webkit-scrollbar-track {
             background: #f1f1f1;
         }
         .mandal-slider::-webkit-scrollbar-thumb {
             background: #1d4ed8;
+            border-radius: 10px;
+        }
+        .zila-slider::-webkit-scrollbar-thumb {
+            background: #15803d;
             border-radius: 10px;
         }
     </style>
@@ -252,21 +256,77 @@
         </div>
 
         <div x-show="tab === 'janpadiya'" style="display: none;" x-transition.opacity.duration.500ms>
-             <div class="bg-white border border-gray-200 p-8 rounded-xl shadow-md text-center max-w-4xl mx-auto">
-                <i class="fa-solid fa-building-user text-5xl text-green-500 mb-4"></i>
-                <h3 class="text-2xl font-bold text-gray-800 mb-4">जनपदीय पदाधिकारी सूची</h3>
-                <p class="text-gray-600 mb-6">यहाँ प्रदेश के सभी जनपदों (ज़िलों) की ITI शाखाओं के अध्यक्ष एवं मंत्रियों का विवरण उपलब्ध कराया जाएगा।</p>
+            <div x-data="{ 
+                activeZila: 'लखनऊ',
+                zilaList: [
+                    { name: 'लखनऊ', adhyaksh: 'श्री [नाम भरें]', mantri: 'श्री [नाम भरें]' },
+                    { name: 'कानपुर नगर', adhyaksh: 'श्री [नाम भरें]', mantri: 'श्री [नाम भरें]' },
+                    { name: 'गोरखपुर', adhyaksh: 'श्री [नाम भरें]', mantri: 'श्री [नाम भरें]' },
+                    { name: 'वाराणसी', adhyaksh: 'श्री [नाम भरें]', mantri: 'श्री [नाम भरें]' },
+                    { name: 'प्रयागराज', adhyaksh: 'श्री [नाम भरें]', mantri: 'श्री [नाम भरें]' },
+                    { name: 'मेरठ', adhyaksh: 'श्री [नाम भरें]', mantri: 'श्री [नाम भरें]' },
+                    { name: 'आगरा', adhyaksh: 'श्री [नाम भरें]', mantri: 'श्री [नाम भरें]' },
+                    { name: 'झाँसी', adhyaksh: 'श्री [नाम भरें]', mantri: 'श्री [नाम भरें]' },
+                    { name: 'बस्ती', adhyaksh: 'श्री [नाम भरें]', mantri: 'श्री [नाम भरें]' }
+                ]
+            }">
                 
-                <div class="bg-gray-50 p-4 rounded-lg border border-gray-200 flex flex-col sm:flex-row gap-4 mb-6">
-                    <input type="text" placeholder="ज़िला खोजें (उदा: गोरखपुर)..." class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-green-500">
-                    <button class="bg-green-700 text-white px-6 py-2 rounded hover:bg-green-800 font-bold shadow-sm">खोजें</button>
-                </div>
+                <div class="flex flex-col lg:flex-row gap-8 items-start">
+                    
+                    <div class="w-full lg:w-1/4 bg-white rounded-xl shadow-md border border-gray-200 overflow-hidden sticky top-24">
+                        <div class="bg-green-800 text-white p-4 font-bold flex items-center">
+                            <i class="fa-solid fa-building-user mr-2"></i> जनपद सूची
+                        </div>
+                        <div class="zila-slider max-h-[500px] overflow-y-auto">
+                            <template x-for="z in zilaList" :key="z.name">
+                                <button @click="activeZila = z.name" 
+                                        :class="activeZila === z.name ? 'bg-green-50 border-l-8 border-green-700 text-green-800' : 'bg-white text-gray-600 hover:bg-gray-50 border-l-8 border-transparent'" 
+                                        class="w-full text-left px-5 py-4 border-b border-gray-100 font-bold transition-all duration-200 flex justify-between items-center">
+                                    <span x-text="z.name"></span>
+                                    <i class="fa-solid fa-chevron-right text-xs opacity-50" x-show="activeZila === z.name"></i>
+                                </button>
+                            </template>
+                        </div>
+                    </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-left">
-                    <div class="border border-gray-200 p-4 rounded bg-gray-50 hover:shadow-md transition">
-                        <h4 class="font-bold text-lg text-gray-800 border-b pb-2 mb-2">ज़िला: लखनऊ</h4>
-                        <p class="text-sm text-gray-600"><span class="font-semibold text-gray-800">अध्यक्ष:</span> श्री [नाम]</p>
-                        <p class="text-sm text-gray-600"><span class="font-semibold text-gray-800">मंत्री:</span> श्री [नाम]</p>
+                    <div class="w-full lg:w-3/4">
+                        <div class="bg-white border border-gray-200 p-6 md:p-10 rounded-2xl shadow-lg min-h-[500px]">
+                            <template x-for="z in zilaList" :key="'content-'+z.name">
+                                <div x-show="activeZila === z.name" x-transition.opacity.duration.300ms>
+                                    
+                                    <div class="text-center mb-10">
+                                        <span class="bg-green-100 text-green-800 font-bold px-6 py-2 rounded-full text-lg tracking-wide mb-3 inline-block shadow-sm">
+                                            <i class="fa-solid fa-location-dot mr-2"></i> <span x-text="z.name + ' जनपद'"></span>
+                                        </span>
+                                        <h3 class="text-2xl md:text-3xl font-extrabold text-gray-800 mt-4">जनपदीय कार्यकारिणी पदाधिकारी</h3>
+                                        <div class="w-24 h-1 bg-red-500 mx-auto mt-2"></div>
+                                    </div>
+                                    
+                                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                                        <div class="bg-gray-50 p-8 rounded-xl shadow-md border-t-4 border-red-600 text-center transform transition hover:shadow-xl">
+                                            <div class="w-32 h-32 rounded-full bg-white flex items-center justify-center border-4 border-gray-200 mx-auto mb-4 shadow-inner">
+                                                <i class="fa-solid fa-user-tie text-6xl text-gray-300"></i>
+                                            </div>
+                                            <h4 class="text-2xl font-bold text-gray-800 mb-2" x-text="z.adhyaksh"></h4>
+                                            <p class="bg-red-600 text-white inline-block px-4 py-1 rounded font-bold text-sm uppercase tracking-widest">जनपदीय अध्यक्ष</p>
+                                        </div>
+                                        
+                                        <div class="bg-gray-50 p-8 rounded-xl shadow-md border-t-4 border-green-700 text-center transform transition hover:shadow-xl">
+                                            <div class="w-32 h-32 rounded-full bg-white flex items-center justify-center border-4 border-gray-200 mx-auto mb-4 shadow-inner">
+                                                <i class="fa-solid fa-user-tie text-6xl text-gray-300"></i>
+                                            </div>
+                                            <h4 class="text-2xl font-bold text-gray-800 mb-2" x-text="z.mantri"></h4>
+                                            <p class="bg-green-700 text-white inline-block px-4 py-1 rounded font-bold text-sm uppercase tracking-widest">जनपदीय मंत्री</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="mt-12 p-6 bg-green-50 rounded-lg border border-green-100 flex items-center justify-center text-green-800 italic">
+                                        <i class="fa-solid fa-info-circle mr-3 text-xl"></i>
+                                        उक्त विवरण संबंधित जनपद की कार्यकारिणी के निर्वाचित पदाधिकारियों का है।
+                                    </div>
+                                </div>
+                            </template>
+                        </div>
                     </div>
                 </div>
             </div>
