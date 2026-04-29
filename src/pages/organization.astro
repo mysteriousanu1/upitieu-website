@@ -290,6 +290,6 @@
                             </div>
                             <div class="max-h-[60px] md:max-h-[500px] overflow-y-auto p-2 custom-scrollbar flex flex-row md:flex-col snap-x md:snap-none space-x-2 md:space-x-0 md:space-y-1">
                                 <template x-for="j in janpadList" :key="j.name">
-                                    <button @click="activeJanpad = j.name" 
+                                    <button @click="activeJanpad = j.name">
                                             :class="activeJanpad === j.name ? 'bg-green-50 text-green-800 font-bold md:border-l-4 border-b-4 md:border-b-0 border-green-600 shadow-sm' : 'text-gray-600 hover:bg-gray-50 md:border-l-4 border-b-4 md:border-b-0 border-transparent hover:border-gray-300'" 
                                             class="w-auto md:w-full text-center
