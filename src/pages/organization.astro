@@ -69,27 +69,114 @@
 
             <div x-show="tab === 'prantiya'" x-transition.opacity.duration.500ms>
                 <div class="flex flex-col items-center space-y-10">
+                    
+                    <div class="w-full max-w-4xl grid grid-cols-1 md:grid-cols-2 gap-8 border-b-2 border-gray-200 pb-10">
+                        <div class="bg-amber-50 p-6 rounded-xl shadow-md border-t-4 border-amber-500 text-center flex flex-col items-center justify-center">
+                            <i class="fa-solid fa-crown text-3xl text-amber-500 mb-3"></i>
+                            <p class="text-amber-700 font-bold mb-1 uppercase tracking-wider text-sm">संघ संरक्षक</p>
+                            <h3 class="text-2xl font-bold text-gray-800">मो० ई० एच० जैदी</h3>
+                        </div>
+                        <div class="bg-amber-50 p-6 rounded-xl shadow-md border-t-4 border-amber-500 text-center flex flex-col items-center justify-center">
+                            <i class="fa-solid fa-crown text-3xl text-amber-500 mb-3"></i>
+                            <p class="text-amber-700 font-bold mb-1 uppercase tracking-wider text-sm">संघ संरक्षक</p>
+                            <h3 class="text-2xl font-bold text-gray-800">श्री अनिल कु० पाठक</h3>
+                        </div>
+                    </div>
+
                     <div class="w-full max-w-sm">
-                        <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-red-600 text-center transform transition hover:-translate-y-1 hover:shadow-2xl">
-                            <div class="w-32 h-32 rounded-full mx-auto bg-gray-100 flex items-center justify-center border-4 border-gray-200 shadow-sm mb-4 overflow-hidden">
-                                <img src="/vivek.png" alt="President" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-                                <i class="fa-solid fa-user-tie text-5xl text-gray-400 hidden"></i>
+                        <div class="bg-white p-8 rounded-xl shadow-2xl border-t-4 border-red-600 text-center transform transition hover:-translate-y-2">
+                            <div class="w-36 h-36 rounded-full mx-auto bg-gray-100 flex items-center justify-center border-4 border-gray-200 shadow-sm mb-5 overflow-hidden">
+                                <img src="/vivek.png" alt="अध्यक्ष" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                                <i class="fa-solid fa-user-tie text-6xl text-gray-400 hidden"></i>
                             </div>
-                            <h3 class="text-2xl font-bold text-gray-800 mb-1">श्री [अध्यक्ष का नाम]</h3>
-                            <p class="text-red-600 font-bold text-lg mb-2">प्रान्तीय अध्यक्ष</p>
-                            <p class="text-sm text-gray-500 font-medium">GITI [संस्थान का नाम]</p>
+                            <h3 class="text-3xl font-bold text-gray-800 mb-1">श्री [नाम]</h3>
+                            <p class="text-red-600 font-black text-xl mb-2 tracking-wide">1. अध्यक्ष</p>
                         </div>
                     </div>
-                    <div class="w-full grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl relative pt-6 border-t border-gray-300">
-                        <div class="bg-white p-6 rounded-xl shadow border-t-4 border-gray-400 text-center">
-                            <h3 class="text-xl font-bold text-gray-800 mb-1">श्री [नाम]</h3>
-                            <p class="text-blue-600 font-bold mb-2">प्रान्तीय महामंत्री</p>
-                        </div>
-                        <div class="bg-white p-6 rounded-xl shadow border-t-4 border-gray-400 text-center">
-                            <h3 class="text-xl font-bold text-gray-800 mb-1">श्री [नाम]</h3>
-                            <p class="text-blue-600 font-bold mb-2">प्रान्तीय वरिष्ठ उपाध्यक्ष</p>
+
+                    <div class="w-full max-w-xs mt-2">
+                        <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-blue-600 text-center transform transition hover:-translate-y-1">
+                            <div class="w-28 h-28 rounded-full mx-auto bg-gray-100 flex items-center justify-center border-4 border-gray-200 shadow-sm mb-4 overflow-hidden">
+                                <i class="fa-solid fa-user-tie text-5xl text-gray-400"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-gray-800 mb-1">श्री [नाम]</h3>
+                            <p class="text-blue-700 font-bold text-lg mb-2">2. महामंत्री</p>
                         </div>
                     </div>
+
+                    <div class="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-6xl relative pt-10 border-t border-gray-300">
+                        
+                        <div class="bg-white p-5 rounded-lg shadow-md border-t-4 border-gray-500 text-center hover:shadow-lg transition">
+                            <h3 class="text-lg font-bold text-gray-800 mb-1">श्री [नाम]</h3>
+                            <p class="text-gray-600 font-semibold text-sm">3. उपाध्यक्ष</p>
+                        </div>
+                        
+                        <div class="bg-white p-5 rounded-lg shadow-md border-t-4 border-gray-500 text-center hover:shadow-lg transition">
+                            <h3 class="text-lg font-bold text-gray-800 mb-1">श्री [नाम]</h3>
+                            <p class="text-gray-600 font-semibold text-sm">4. उपाध्यक्ष</p>
+                        </div>
+
+                        <div class="bg-white p-5 rounded-lg shadow-md border-t-4 border-gray-500 text-center hover:shadow-lg transition">
+                            <h3 class="text-lg font-bold text-gray-800 mb-1">श्री [नाम]</h3>
+                            <p class="text-gray-600 font-semibold text-sm">5. संयुक्त मंत्री</p>
+                        </div>
+
+                        <div class="bg-white p-5 rounded-lg shadow-md border-t-4 border-gray-500 text-center hover:shadow-lg transition">
+                            <h3 class="text-lg font-bold text-gray-800 mb-1">श्री [नाम]</h3>
+                            <p class="text-gray-600 font-semibold text-sm">6. कोषाध्यक्ष</p>
+                        </div>
+
+                        <div class="bg-white p-5 rounded-lg shadow-md border-t-4 border-gray-500 text-center hover:shadow-lg transition">
+                            <h3 class="text-lg font-bold text-gray-800 mb-1">श्री [नाम]</h3>
+                            <p class="text-gray-600 font-semibold text-sm">7. सम्प्रेक्षक</p>
+                        </div>
+
+                        <div class="bg-white p-5 rounded-lg shadow-md border-t-4 border-gray-500 text-center hover:shadow-lg transition">
+                            <h3 class="text-lg font-bold text-gray-800 mb-1">श्री [नाम]</h3>
+                            <p class="text-gray-600 font-semibold text-sm">8. संगठन मंत्री</p>
+                        </div>
+
+                        <div class="bg-white p-5 rounded-lg shadow-md border-t-4 border-gray-500 text-center hover:shadow-lg transition">
+                            <h3 class="text-lg font-bold text-gray-800 mb-1">श्री [नाम]</h3>
+                            <p class="text-gray-600 font-semibold text-sm">9. संगठन मंत्री</p>
+                        </div>
+
+                        <div class="bg-white p-5 rounded-lg shadow-md border-t-4 border-gray-500 text-center hover:shadow-lg transition">
+                            <h3 class="text-lg font-bold text-gray-800 mb-1">श्री [नाम]</h3>
+                            <p class="text-gray-600 font-semibold text-sm">10. प्रचार मंत्री</p>
+                        </div>
+                    </div>
+
+                    <div class="w-full max-w-4xl mt-12 bg-gray-50 p-8 rounded-xl border border-gray-300 shadow-inner">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-6 text-center border-b-2 border-gray-300 pb-3">निर्वाचित कार्यकारिणी सदस्य</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="bg-white p-3 rounded shadow-sm border border-gray-200 flex items-center">
+                                <i class="fa-solid fa-circle-check text-green-500 mr-3"></i>
+                                <span class="font-medium text-gray-700">श्री [सदस्य 1]</span>
+                            </div>
+                            <div class="bg-white p-3 rounded shadow-sm border border-gray-200 flex items-center">
+                                <i class="fa-solid fa-circle-check text-green-500 mr-3"></i>
+                                <span class="font-medium text-gray-700">श्री [सदस्य 2]</span>
+                            </div>
+                            <div class="bg-white p-3 rounded shadow-sm border border-gray-200 flex items-center">
+                                <i class="fa-solid fa-circle-check text-green-500 mr-3"></i>
+                                <span class="font-medium text-gray-700">श्री [सदस्य 3]</span>
+                            </div>
+                            <div class="bg-white p-3 rounded shadow-sm border border-gray-200 flex items-center">
+                                <i class="fa-solid fa-circle-check text-green-500 mr-3"></i>
+                                <span class="font-medium text-gray-700">श्री [सदस्य 4]</span>
+                            </div>
+                            <div class="bg-white p-3 rounded shadow-sm border border-gray-200 flex items-center">
+                                <i class="fa-solid fa-circle-check text-green-500 mr-3"></i>
+                                <span class="font-medium text-gray-700">श्री [सदस्य 5]</span>
+                            </div>
+                            <div class="bg-white p-3 rounded shadow-sm border border-gray-200 flex items-center">
+                                <i class="fa-solid fa-circle-check text-green-500 mr-3"></i>
+                                <span class="font-medium text-gray-700">श्री [सदस्य 6]</span>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
 
