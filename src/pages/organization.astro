@@ -66,7 +66,6 @@
 
         <div x-show="tab === 'prantiya'" x-transition.opacity.duration.500ms>
             <div class="flex flex-col items-center space-y-10">
-                
                 <div class="w-full max-w-4xl grid grid-cols-1 md:grid-cols-2 gap-8 border-b-2 border-gray-200 pb-10">
                     <div class="bg-amber-50 p-6 rounded-xl shadow-md border-t-4 border-amber-500 text-center flex flex-col items-center justify-center">
                         <i class="fa-solid fa-crown text-3xl text-amber-500 mb-3"></i>
@@ -153,7 +152,6 @@
         </div>
 
         <div x-show="tab === 'mandaliya'" style="display: none;" x-transition.opacity.duration.500ms>
-            
             <div x-data="{ 
                 activeMandal: 'लखनऊ',
                 mandalList: [
@@ -181,16 +179,15 @@
                 <div class="text-center mb-8">
                     <i class="fa-solid fa-map-location-dot text-5xl text-blue-500 mb-4"></i>
                     <h3 class="text-2xl font-bold text-gray-800">18 मण्डल कार्यकारिणी</h3>
-                    <p class="text-gray-600 mt-2">नीचे दिए गए किसी भी मण्डल पर क्लिक करके वहां के अध्यक्ष और मंत्री की जानकारी देखें।</p>
+                    <p class="text-gray-600 mt-2">नीचे दिए गए ड्रॉपडाउन से मण्डल चुनें:</p>
                 </div>
 
-                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3 mb-10">
-                    <template x-for="m in mandalList" :key="m.name">
-                        <button @click="activeMandal = m.name" 
-                                :class="activeMandal === m.name ? 'bg-blue-700 text-white shadow-md scale-105' : 'bg-white text-gray-700 hover:bg-blue-50'" 
-                                class="px-2 py-3 rounded-lg shadow-sm border border-gray-200 font-bold transition-all duration-200 text-sm md:text-base" 
-                                x-text="m.name"></button>
-                    </template>
+                <div class="mb-10 w-full max-w-xs mx-auto">
+                    <select x-model="activeMandal" class="w-full px-4 py-3 border-2 border-blue-500 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 text-lg font-bold text-gray-700 bg-white">
+                        <template x-for="m in mandalList" :key="m.name">
+                            <option :value="m.name" x-text="m.name"></option>
+                        </template>
+                    </select>
                 </div>
 
                 <div class="bg-gray-50 border border-gray-200 p-6 md:p-10 rounded-2xl shadow-inner max-w-4xl mx-auto">
