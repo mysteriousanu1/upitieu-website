@@ -30,7 +30,7 @@
                 <img src="/logo.png" alt="UPITI Logo" class="h-32 w-auto object-contain">
             </div>
             <div class="text-center flex-1 px-4">
-                <h1 class="text-3xl md:text-5xl text-red-600 font-bold mb-2">उत्तर प्रदेश औद्योगिक प्रशिक्षण संस्थान कर्मचारी संघ</h1>
+                <h1 class="text-5xl text-red-600 font-bold mb-2">उत्तर प्रदेश औद्योगिक प्रशिक्षण संस्थान कर्मचारी संघ</h1>
                 <h2 class="text-2xl md:text-3xl font-extrabold text-blue-900 mb-1" style="font-family: 'Cambria', serif;">UTTAR PRADESH INDUSTRIAL TRAINING INSTITUTE EMPLOYEES UNION.</h2>
                 <p class="text-sm md:text-base text-gray-600 font-semibold uppercase tracking-wide">(उ0 प्र0 शासन, श्रम अनुभाग-6, संख्या 482/36-6-207/71 लखनऊ दिनांक 1 मार्च, 1974 द्वारा मान्यता प्राप्त)</p>
                 <p class="text-sm md:text-base text-red-600 font-semibold uppercase tracking-wide">सम्बद्ध: राज्य कर्मचारी संयुक्त परिषद, उत्तर प्रदेश</p>
@@ -79,6 +79,7 @@
 
         <div x-show="tab === 'prantiya'" x-transition.opacity.duration.500ms>
             <div class="flex flex-col items-center space-y-10">
+                
                 <div class="w-full max-w-4xl grid grid-cols-1 md:grid-cols-2 gap-8 border-b-2 border-gray-200 pb-10">
                     <div class="bg-amber-50 p-6 rounded-xl shadow-md border-t-4 border-amber-500 text-center flex flex-col items-center justify-center">
                         <i class="fa-solid fa-crown text-3xl text-amber-500 mb-3"></i>
@@ -114,12 +115,52 @@
                 </div>
 
                 <div class="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-6xl relative pt-10 border-t border-gray-300">
-                    <template x-for="i in [3,4,5,6,7,8,9,10]">
-                        <div class="bg-white p-5 rounded-lg shadow-md border-t-4 border-gray-500 text-center hover:shadow-lg transition">
-                            <h3 class="text-lg font-bold text-gray-800 mb-1">श्री [नाम]</h3>
-                            <p class="text-gray-600 font-semibold text-sm" x-text="i + '. पद का नाम'"></p>
+                    <div class="bg-white p-5 rounded-lg shadow-md border-t-4 border-gray-500 text-center hover:shadow-lg transition">
+                        <h3 class="text-lg font-bold text-gray-800 mb-1">श्री [नाम]</h3>
+                        <p class="text-gray-600 font-semibold text-sm">3. उपाध्यक्ष</p>
+                    </div>
+                    <div class="bg-white p-5 rounded-lg shadow-md border-t-4 border-gray-500 text-center hover:shadow-lg transition">
+                        <h3 class="text-lg font-bold text-gray-800 mb-1">श्री [नाम]</h3>
+                        <p class="text-gray-600 font-semibold text-sm">4. उपाध्यक्ष</p>
+                    </div>
+                    <div class="bg-white p-5 rounded-lg shadow-md border-t-4 border-gray-500 text-center hover:shadow-lg transition">
+                        <h3 class="text-lg font-bold text-gray-800 mb-1">श्री [नाम]</h3>
+                        <p class="text-gray-600 font-semibold text-sm">5. संयुक्त मंत्री</p>
+                    </div>
+                    <div class="bg-white p-5 rounded-lg shadow-md border-t-4 border-gray-500 text-center hover:shadow-lg transition">
+                        <h3 class="text-lg font-bold text-gray-800 mb-1">श्री [नाम]</h3>
+                        <p class="text-gray-600 font-semibold text-sm">6. कोषाध्यक्ष</p>
+                    </div>
+                    <div class="bg-white p-5 rounded-lg shadow-md border-t-4 border-gray-500 text-center hover:shadow-lg transition">
+                        <h3 class="text-lg font-bold text-gray-800 mb-1">श्री [नाम]</h3>
+                        <p class="text-gray-600 font-semibold text-sm">7. सम्प्रेक्षक</p>
+                    </div>
+                    <div class="bg-white p-5 rounded-lg shadow-md border-t-4 border-gray-500 text-center hover:shadow-lg transition">
+                        <h3 class="text-lg font-bold text-gray-800 mb-1">श्री [नाम]</h3>
+                        <p class="text-gray-600 font-semibold text-sm">8. संगठन मंत्री</p>
+                    </div>
+                    <div class="bg-white p-5 rounded-lg shadow-md border-t-4 border-gray-500 text-center hover:shadow-lg transition">
+                        <h3 class="text-lg font-bold text-gray-800 mb-1">श्री [नाम]</h3>
+                        <p class="text-gray-600 font-semibold text-sm">9. संगठन मंत्री</p>
+                    </div>
+                    <div class="bg-white p-5 rounded-lg shadow-md border-t-4 border-gray-500 text-center hover:shadow-lg transition">
+                        <h3 class="text-lg font-bold text-gray-800 mb-1">श्री [नाम]</h3>
+                        <p class="text-gray-600 font-semibold text-sm">10. प्रचार मंत्री</p>
+                    </div>
+                </div>
+
+                <div class="w-full max-w-4xl mt-12 bg-white p-8 rounded-xl border border-gray-200 shadow-md">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6 text-center border-b-2 border-gray-200 pb-3">निर्वाचित कार्यकारिणी सदस्य</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="bg-gray-50 p-3 rounded shadow-sm border border-gray-200 flex items-center">
+                            <i class="fa-solid fa-circle-check text-green-500 mr-3"></i>
+                            <span class="font-medium text-gray-700">श्री [सदस्य का नाम]</span>
                         </div>
-                    </template>
+                        <div class="bg-gray-50 p-3 rounded shadow-sm border border-gray-200 flex items-center">
+                            <i class="fa-solid fa-circle-check text-green-500 mr-3"></i>
+                            <span class="font-medium text-gray-700">श्री [सदस्य का नाम]</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -155,7 +196,7 @@
                         <div class="bg-blue-800 text-white p-4 font-bold flex items-center">
                             <i class="fa-solid fa-map-location-dot mr-2"></i> 18 मण्डल सूची
                         </div>
-                        <div class="mandal-slider max-h-[550px] overflow-y-auto">
+                        <div class="mandal-slider max-h-[500px] overflow-y-auto">
                             <template x-for="m in mandalList" :key="m.name">
                                 <button @click="activeMandal = m.name" 
                                         :class="activeMandal === m.name ? 'bg-blue-50 border-l-8 border-blue-700 text-blue-800' : 'bg-white text-gray-600 hover:bg-gray-50 border-l-8 border-transparent'" 
@@ -168,7 +209,7 @@
                     </div>
 
                     <div class="w-full lg:w-3/4">
-                        <div class="bg-white border border-gray-200 p-6 md:p-10 rounded-2xl shadow-lg">
+                        <div class="bg-white border border-gray-200 p-6 md:p-10 rounded-2xl shadow-lg min-h-[500px]">
                             <template x-for="m in mandalList" :key="'content-'+m.name">
                                 <div x-show="activeMandal === m.name" x-transition.opacity.duration.300ms>
                                     
@@ -196,6 +237,11 @@
                                             <h4 class="text-2xl font-bold text-gray-800 mb-2" x-text="m.mantri"></h4>
                                             <p class="bg-blue-700 text-white inline-block px-4 py-1 rounded font-bold text-sm uppercase tracking-widest">मण्डलीय मंत्री</p>
                                         </div>
+                                    </div>
+
+                                    <div class="mt-12 p-6 bg-blue-50 rounded-lg border border-blue-100 flex items-center justify-center text-blue-800 italic">
+                                        <i class="fa-solid fa-info-circle mr-3 text-xl"></i>
+                                        उक्त विवरण संबंधित मण्डल की कार्यकारिणी के निर्वाचित पदाधिकारियों का है।
                                     </div>
                                 </div>
                             </template>
