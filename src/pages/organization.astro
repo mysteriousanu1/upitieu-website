@@ -46,7 +46,7 @@
             <p class="text-gray-600 mt-4 text-lg">उत्तर प्रदेश औद्योगिक प्रशिक्षण संस्थान कर्मचारी संघ की कार्यकारिणी समितियां</p>
         </div>
 
-        <div class="flex flex-col sm:flex-row justify-center items-center space-y-3 sm:space-y-0 sm:space-x-4 mb-12 border-b-2 border-gray-200 pb-4">
+        <div class="flex flex-col sm:flex-row justify-center items-center space-y-3 sm:space-y-0 sm:space-x-4 mb-12 border-b-2 border-gray-200 pb-4 max-w-4xl mx-auto">
             <button @click="tab = 'prantiya'" 
                     :class="tab === 'prantiya' ? 'bg-red-600 text-white shadow-lg scale-105' : 'bg-gray-100 text-gray-700 hover:bg-gray-200 border border-gray-300'" 
                     class="w-full sm:w-auto px-6 py-3 font-bold rounded-lg transition-all duration-300 text-lg flex items-center justify-center">
@@ -102,42 +102,34 @@
                 </div>
 
                 <div class="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-6xl relative pt-10 border-t border-gray-300">
-                    
                     <div class="bg-white p-5 rounded-lg shadow-md border-t-4 border-gray-500 text-center hover:shadow-lg transition">
                         <h3 class="text-lg font-bold text-gray-800 mb-1">श्री [नाम]</h3>
                         <p class="text-gray-600 font-semibold text-sm">3. उपाध्यक्ष</p>
                     </div>
-                    
                     <div class="bg-white p-5 rounded-lg shadow-md border-t-4 border-gray-500 text-center hover:shadow-lg transition">
                         <h3 class="text-lg font-bold text-gray-800 mb-1">श्री [नाम]</h3>
                         <p class="text-gray-600 font-semibold text-sm">4. उपाध्यक्ष</p>
                     </div>
-
                     <div class="bg-white p-5 rounded-lg shadow-md border-t-4 border-gray-500 text-center hover:shadow-lg transition">
                         <h3 class="text-lg font-bold text-gray-800 mb-1">श्री [नाम]</h3>
                         <p class="text-gray-600 font-semibold text-sm">5. संयुक्त मंत्री</p>
                     </div>
-
                     <div class="bg-white p-5 rounded-lg shadow-md border-t-4 border-gray-500 text-center hover:shadow-lg transition">
                         <h3 class="text-lg font-bold text-gray-800 mb-1">श्री [नाम]</h3>
                         <p class="text-gray-600 font-semibold text-sm">6. कोषाध्यक्ष</p>
                     </div>
-
                     <div class="bg-white p-5 rounded-lg shadow-md border-t-4 border-gray-500 text-center hover:shadow-lg transition">
                         <h3 class="text-lg font-bold text-gray-800 mb-1">श्री [नाम]</h3>
                         <p class="text-gray-600 font-semibold text-sm">7. सम्प्रेक्षक</p>
                     </div>
-
                     <div class="bg-white p-5 rounded-lg shadow-md border-t-4 border-gray-500 text-center hover:shadow-lg transition">
                         <h3 class="text-lg font-bold text-gray-800 mb-1">श्री [नाम]</h3>
                         <p class="text-gray-600 font-semibold text-sm">8. संगठन मंत्री</p>
                     </div>
-
                     <div class="bg-white p-5 rounded-lg shadow-md border-t-4 border-gray-500 text-center hover:shadow-lg transition">
                         <h3 class="text-lg font-bold text-gray-800 mb-1">श्री [नाम]</h3>
                         <p class="text-gray-600 font-semibold text-sm">9. संगठन मंत्री</p>
                     </div>
-
                     <div class="bg-white p-5 rounded-lg shadow-md border-t-4 border-gray-500 text-center hover:shadow-lg transition">
                         <h3 class="text-lg font-bold text-gray-800 mb-1">श्री [नाम]</h3>
                         <p class="text-gray-600 font-semibold text-sm">10. प्रचार मंत्री</p>
@@ -149,62 +141,88 @@
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div class="bg-gray-50 p-3 rounded shadow-sm border border-gray-200 flex items-center">
                             <i class="fa-solid fa-circle-check text-green-500 mr-3"></i>
-                            <span class="font-medium text-gray-700">श्री [सदस्य 1]</span>
+                            <span class="font-medium text-gray-700">श्री [सदस्य का नाम]</span>
                         </div>
                         <div class="bg-gray-50 p-3 rounded shadow-sm border border-gray-200 flex items-center">
                             <i class="fa-solid fa-circle-check text-green-500 mr-3"></i>
-                            <span class="font-medium text-gray-700">श्री [सदस्य 2]</span>
-                        </div>
-                        <div class="bg-gray-50 p-3 rounded shadow-sm border border-gray-200 flex items-center">
-                            <i class="fa-solid fa-circle-check text-green-500 mr-3"></i>
-                            <span class="font-medium text-gray-700">श्री [सदस्य 3]</span>
-                        </div>
-                        <div class="bg-gray-50 p-3 rounded shadow-sm border border-gray-200 flex items-center">
-                            <i class="fa-solid fa-circle-check text-green-500 mr-3"></i>
-                            <span class="font-medium text-gray-700">श्री [सदस्य 4]</span>
-                        </div>
-                        <div class="bg-gray-50 p-3 rounded shadow-sm border border-gray-200 flex items-center">
-                            <i class="fa-solid fa-circle-check text-green-500 mr-3"></i>
-                            <span class="font-medium text-gray-700">श्री [सदस्य 5]</span>
-                        </div>
-                        <div class="bg-gray-50 p-3 rounded shadow-sm border border-gray-200 flex items-center">
-                            <i class="fa-solid fa-circle-check text-green-500 mr-3"></i>
-                            <span class="font-medium text-gray-700">श्री [सदस्य 6]</span>
+                            <span class="font-medium text-gray-700">श्री [सदस्य का नाम]</span>
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
 
         <div x-show="tab === 'mandaliya'" style="display: none;" x-transition.opacity.duration.500ms>
-            <div class="bg-white border border-gray-200 p-8 rounded-xl shadow-md text-center max-w-4xl mx-auto">
-                <i class="fa-solid fa-map text-5xl text-blue-500 mb-4"></i>
-                <h3 class="text-2xl font-bold text-gray-800 mb-4">मण्डलीय पदाधिकारी सूची</h3>
-                <p class="text-gray-600 mb-6">यहाँ उत्तर प्रदेश के सभी 18 मण्डलों (जैसे लखनऊ, कानपुर, वाराणसी आदि) के अध्यक्ष और मंत्रियों की जानकारी जोड़ी जाएगी।</p>
+            
+            <div x-data="{ 
+                activeMandal: 'लखनऊ',
+                mandalList: [
+                    { name: 'आगरा', adhyaksh: 'श्री [नाम भरें]', mantri: 'श्री [नाम भरें]' },
+                    { name: 'अलीगढ़', adhyaksh: 'श्री [नाम भरें]', mantri: 'श्री [नाम भरें]' },
+                    { name: 'अयोध्या', adhyaksh: 'श्री [नाम भरें]', mantri: 'श्री [नाम भरें]' },
+                    { name: 'आज़मगढ़', adhyaksh: 'श्री [नाम भरें]', mantri: 'श्री [नाम भरें]' },
+                    { name: 'बरेली', adhyaksh: 'श्री [नाम भरें]', mantri: 'श्री [नाम भरें]' },
+                    { name: 'बस्ती', adhyaksh: 'श्री [नाम भरें]', mantri: 'श्री [नाम भरें]' },
+                    { name: 'चित्रकूट', adhyaksh: 'श्री [नाम भरें]', mantri: 'श्री [नाम भरें]' },
+                    { name: 'देवीपाटन', adhyaksh: 'श्री [नाम भरें]', mantri: 'श्री [नाम भरें]' },
+                    { name: 'गोरखपुर', adhyaksh: 'श्री [नाम भरें]', mantri: 'श्री [नाम भरें]' },
+                    { name: 'झाँसी', adhyaksh: 'श्री [नाम भरें]', mantri: 'श्री [नाम भरें]' },
+                    { name: 'कानपुर', adhyaksh: 'श्री [नाम भरें]', mantri: 'श्री [नाम भरें]' },
+                    { name: 'लखनऊ', adhyaksh: 'श्री [नाम भरें]', mantri: 'श्री [नाम भरें]' },
+                    { name: 'मेरठ', adhyaksh: 'श्री [नाम भरें]', mantri: 'श्री [नाम भरें]' },
+                    { name: 'मिर्ज़ापुर', adhyaksh: 'श्री [नाम भरें]', mantri: 'श्री [नाम भरें]' },
+                    { name: 'मुरादाबाद', adhyaksh: 'श्री [नाम भरें]', mantri: 'श्री [नाम भरें]' },
+                    { name: 'प्रयागराज', adhyaksh: 'श्री [नाम भरें]', mantri: 'श्री [नाम भरें]' },
+                    { name: 'सहारनपुर', adhyaksh: 'श्री [नाम भरें]', mantri: 'श्री [नाम भरें]' },
+                    { name: 'वाराणसी', adhyaksh: 'श्री [नाम भरें]', mantri: 'श्री [नाम भरें]' }
+                ]
+            }">
                 
-                <div class="overflow-x-auto bg-white rounded-lg shadow-sm border border-gray-200">
-                    <table class="min-w-full divide-y divide-gray-200 text-left">
-                        <thead class="bg-blue-800 text-white">
-                            <tr>
-                                <th class="px-6 py-3 text-sm font-bold uppercase tracking-wider">मण्डल का नाम</th>
-                                <th class="px-6 py-3 text-sm font-bold uppercase tracking-wider">मण्डलीय अध्यक्ष</th>
-                                <th class="px-6 py-3 text-sm font-bold uppercase tracking-wider">मण्डलीय मंत्री</th>
-                            </tr>
-                        </thead>
-                        <tbody class="divide-y divide-gray-200">
-                            <tr class="hover:bg-gray-50">
-                                <td class="px-6 py-4 font-bold text-gray-800">लखनऊ मण्डल</td>
-                                <td class="px-6 py-4 text-gray-600">श्री [नाम]</td>
-                                <td class="px-6 py-4 text-gray-600">श्री [नाम]</td>
-                            </tr>
-                            <tr class="hover:bg-gray-50">
-                                <td class="px-6 py-4 font-bold text-gray-800">कानपुर मण्डल</td>
-                                <td class="px-6 py-4 text-gray-600">श्री [नाम]</td>
-                                <td class="px-6 py-4 text-gray-600">श्री [नाम]</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                <div class="text-center mb-8">
+                    <i class="fa-solid fa-map-location-dot text-5xl text-blue-500 mb-4"></i>
+                    <h3 class="text-2xl font-bold text-gray-800">18 मण्डल कार्यकारिणी</h3>
+                    <p class="text-gray-600 mt-2">नीचे दिए गए किसी भी मण्डल पर क्लिक करके वहां के अध्यक्ष और मंत्री की जानकारी देखें।</p>
+                </div>
+
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3 mb-10">
+                    <template x-for="m in mandalList" :key="m.name">
+                        <button @click="activeMandal = m.name" 
+                                :class="activeMandal === m.name ? 'bg-blue-700 text-white shadow-md scale-105' : 'bg-white text-gray-700 hover:bg-blue-50'" 
+                                class="px-2 py-3 rounded-lg shadow-sm border border-gray-200 font-bold transition-all duration-200 text-sm md:text-base" 
+                                x-text="m.name"></button>
+                    </template>
+                </div>
+
+                <div class="bg-gray-50 border border-gray-200 p-6 md:p-10 rounded-2xl shadow-inner max-w-4xl mx-auto">
+                    <template x-for="m in mandalList" :key="'content-'+m.name">
+                        <div x-show="activeMandal === m.name" x-transition.opacity.duration.300ms>
+                            
+                            <div class="text-center mb-10">
+                                <span class="bg-blue-100 text-blue-800 font-bold px-4 py-1 rounded-full text-sm tracking-wide mb-3 inline-block" x-text="m.name + ' मण्डल'"></span>
+                                <h3 class="text-2xl md:text-3xl font-extrabold text-gray-800">मण्डलीय कार्यकारिणी</h3>
+                            </div>
+                            
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                                
+                                <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-red-600 text-center transform transition hover:-translate-y-1">
+                                    <div class="w-28 h-28 rounded-full bg-gray-100 flex items-center justify-center border-4 border-gray-200 mx-auto mb-4">
+                                        <i class="fa-solid fa-user-tie text-5xl text-gray-400"></i>
+                                    </div>
+                                    <h4 class="text-2xl font-bold text-gray-800 mb-2" x-text="m.adhyaksh"></h4>
+                                    <p class="text-red-600 font-bold text-lg">मण्डलीय अध्यक्ष</p>
+                                </div>
+                                
+                                <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-blue-600 text-center transform transition hover:-translate-y-1">
+                                    <div class="w-28 h-28 rounded-full bg-gray-100 flex items-center justify-center border-4 border-gray-200 mx-auto mb-4">
+                                        <i class="fa-solid fa-user-tie text-5xl text-gray-400"></i>
+                                    </div>
+                                    <h4 class="text-2xl font-bold text-gray-800 mb-2" x-text="m.mantri"></h4>
+                                    <p class="text-blue-700 font-bold text-lg">मण्डलीय मंत्री</p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </template>
                 </div>
             </div>
         </div>
@@ -223,11 +241,6 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-left">
                     <div class="border border-gray-200 p-4 rounded bg-gray-50 hover:shadow-md transition">
                         <h4 class="font-bold text-lg text-gray-800 border-b pb-2 mb-2">ज़िला: लखनऊ</h4>
-                        <p class="text-sm text-gray-600"><span class="font-semibold text-gray-800">अध्यक्ष:</span> श्री [नाम]</p>
-                        <p class="text-sm text-gray-600"><span class="font-semibold text-gray-800">मंत्री:</span> श्री [नाम]</p>
-                    </div>
-                    <div class="border border-gray-200 p-4 rounded bg-gray-50 hover:shadow-md transition">
-                        <h4 class="font-bold text-lg text-gray-800 border-b pb-2 mb-2">ज़िला: प्रयागराज</h4>
                         <p class="text-sm text-gray-600"><span class="font-semibold text-gray-800">अध्यक्ष:</span> श्री [नाम]</p>
                         <p class="text-sm text-gray-600"><span class="font-semibold text-gray-800">मंत्री:</span> श्री [नाम]</p>
                     </div>
