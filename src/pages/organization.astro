@@ -63,6 +63,79 @@
             </button>
         </div>
 
+        <div x-show="tab === 'prantiya'" x-transition.opacity.duration.500ms>
+            <div class="flex flex-col items-center space-y-10">
+                <div class="w-full max-w-4xl grid grid-cols-1 md:grid-cols-2 gap-8 border-b-2 border-gray-200 pb-10">
+                    <div class="bg-amber-50 p-6 rounded-xl shadow-md border-t-4 border-amber-500 text-center flex flex-col items-center justify-center">
+                        <i class="fa-solid fa-crown text-3xl text-amber-500 mb-3"></i>
+                        <p class="text-amber-700 font-bold mb-1 uppercase tracking-wider text-sm">संघ संरक्षक</p>
+                        <h3 class="text-2xl font-bold text-gray-800">मो० ई० एच० जैदी</h3>
+                    </div>
+                    <div class="bg-amber-50 p-6 rounded-xl shadow-md border-t-4 border-amber-500 text-center flex flex-col items-center justify-center">
+                        <i class="fa-solid fa-crown text-3xl text-amber-500 mb-3"></i>
+                        <p class="text-amber-700 font-bold mb-1 uppercase tracking-wider text-sm">संघ संरक्षक</p>
+                        <h3 class="text-2xl font-bold text-gray-800">श्री अनिल कु० पाठक</h3>
+                    </div>
+                </div>
+
+                <div class="w-full max-w-sm">
+                    <div class="bg-white p-8 rounded-xl shadow-2xl border-t-4 border-red-600 text-center transform transition hover:-translate-y-2">
+                        <div class="w-36 h-36 rounded-full mx-auto bg-gray-100 flex items-center justify-center border-4 border-gray-200 shadow-sm mb-5 overflow-hidden">
+                            <img src="/vivek.png" alt="अध्यक्ष" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                            <i class="fa-solid fa-user-tie text-6xl text-gray-400 hidden"></i>
+                        </div>
+                        <h3 class="text-3xl font-bold text-gray-800 mb-1">श्री [नाम]</h3>
+                        <p class="text-red-600 font-black text-xl mb-2 tracking-wide">1. अध्यक्ष</p>
+                    </div>
+                </div>
+
+                <div class="w-full max-w-xs mt-2">
+                    <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-blue-600 text-center transform transition hover:-translate-y-1">
+                        <div class="w-28 h-28 rounded-full mx-auto bg-gray-100 flex items-center justify-center border-4 border-gray-200 shadow-sm mb-4 overflow-hidden">
+                            <i class="fa-solid fa-user-tie text-5xl text-gray-400"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-1">श्री [नाम]</h3>
+                        <p class="text-blue-700 font-bold text-lg mb-2">2. महामंत्री</p>
+                    </div>
+                </div>
+
+                <div class="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-6xl relative pt-10 border-t border-gray-300">
+                    <div class="bg-white p-5 rounded-lg shadow-md border-t-4 border-gray-500 text-center hover:shadow-lg transition">
+                        <h3 class="text-lg font-bold text-gray-800 mb-1">श्री [नाम]</h3>
+                        <p class="text-gray-600 font-semibold text-sm">3. उपाध्यक्ष</p>
+                    </div>
+                    <div class="bg-white p-5 rounded-lg shadow-md border-t-4 border-gray-500 text-center hover:shadow-lg transition">
+                        <h3 class="text-lg font-bold text-gray-800 mb-1">श्री [नाम]</h3>
+                        <p class="text-gray-600 font-semibold text-sm">4. उपाध्यक्ष</p>
+                    </div>
+                    <div class="bg-white p-5 rounded-lg shadow-md border-t-4 border-gray-500 text-center hover:shadow-lg transition">
+                        <h3 class="text-lg font-bold text-gray-800 mb-1">श्री [नाम]</h3>
+                        <p class="text-gray-600 font-semibold text-sm">5. संयुक्त मंत्री</p>
+                    </div>
+                    <div class="bg-white p-5 rounded-lg shadow-md border-t-4 border-gray-500 text-center hover:shadow-lg transition">
+                        <h3 class="text-lg font-bold text-gray-800 mb-1">श्री [नाम]</h3>
+                        <p class="text-gray-600 font-semibold text-sm">6. कोषाध्यक्ष</p>
+                    </div>
+                    <div class="bg-white p-5 rounded-lg shadow-md border-t-4 border-gray-500 text-center hover:shadow-lg transition">
+                        <h3 class="text-lg font-bold text-gray-800 mb-1">श्री [नाम]</h3>
+                        <p class="text-gray-600 font-semibold text-sm">7. सम्प्रेक्षक</p>
+                    </div>
+                    <div class="bg-white p-5 rounded-lg shadow-md border-t-4 border-gray-500 text-center hover:shadow-lg transition">
+                        <h3 class="text-lg font-bold text-gray-800 mb-1">श्री [नाम]</h3>
+                        <p class="text-gray-600 font-semibold text-sm">8. संगठन मंत्री</p>
+                    </div>
+                    <div class="bg-white p-5 rounded-lg shadow-md border-t-4 border-gray-500 text-center hover:shadow-lg transition">
+                        <h3 class="text-lg font-bold text-gray-800 mb-1">श्री [नाम]</h3>
+                        <p class="text-gray-600 font-semibold text-sm">9. संगठन मंत्री</p>
+                    </div>
+                    <div class="bg-white p-5 rounded-lg shadow-md border-t-4 border-gray-500 text-center hover:shadow-lg transition">
+                        <h3 class="text-lg font-bold text-gray-800 mb-1">श्री [नाम]</h3>
+                        <p class="text-gray-600 font-semibold text-sm">10. प्रचार मंत्री</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div x-show="tab === 'mandaliya'" style="display: none;" x-transition.opacity.duration.500ms>
             <div x-data="{ 
                 activeMandal: 'लखनऊ',
@@ -125,14 +198,14 @@
             <div x-data="{ 
                 activeZila: 'लखनऊ',
                 zilaList: [
-                    { name: 'अमरोहा', adhyaksh: 'श्री [नाम]', upadhyaksh: 'श्री [नाम]', mantri: 'श्री [नाम]', sanyukt_mantri: 'श्री [नाम]', koshadhyaksh: 'श्री [नाम]' },
-                    { name: 'अमेठी', adhyaksh: 'श्री [नाम]', upadhyaksh: 'श्री [नाम]', mantri: 'श्री [नाम]', sanyukt_mantri: 'श्री [नाम]', koshadhyaksh: 'श्री [नाम]' },
-                    { name: 'अम्बेडकर नगर', adhyaksh: 'श्री [नाम]', upadhyaksh: 'श्री [नाम]', mantri: 'श्री [नाम]', sanyukt_mantri: 'श्री [नाम]', koshadhyaksh: 'श्री [नाम]' },
                     { name: 'अयोध्या', adhyaksh: 'श्री [नाम]', upadhyaksh: 'श्री [नाम]', mantri: 'श्री [नाम]', sanyukt_mantri: 'श्री [नाम]', koshadhyaksh: 'श्री [नाम]' },
-                    { name: 'अलीगढ़', adhyaksh: 'श्री [नाम]', upadhyaksh: 'श्री [नाम]', mantri: 'श्री [नाम]', sanyukt_mantri: 'श्री [नाम]', koshadhyaksh: 'श्री [नाम]' },
-                    { name: 'अौरैया', adhyaksh: 'श्री [नाम]', upadhyaksh: 'श्री [नाम]', mantri: 'श्री [नाम]', sanyukt_mantri: 'श्री [नाम]', koshadhyaksh: 'श्री [नाम]' },
-                    { name: 'आजमगढ़', adhyaksh: 'श्री [नाम]', upadhyaksh: 'श्री [नाम]', mantri: 'श्री [नाम]', sanyukt_mantri: 'श्री [नाम]', koshadhyaksh: 'श्री [नाम]' },
                     { name: 'आगरा', adhyaksh: 'श्री [नाम]', upadhyaksh: 'श्री [नाम]', mantri: 'श्री [नाम]', sanyukt_mantri: 'श्री [नाम]', koshadhyaksh: 'श्री [नाम]' },
+                    { name: 'आजमगढ़', adhyaksh: 'श्री [नाम]', upadhyaksh: 'श्री [नाम]', mantri: 'श्री [नाम]', sanyukt_mantri: 'श्री [नाम]', koshadhyaksh: 'श्री [नाम]' },
+                    { name: 'अलीगढ़', adhyaksh: 'श्री [नाम]', upadhyaksh: 'श्री [नाम]', mantri: 'श्री [नाम]', sanyukt_mantri: 'श्री [नाम]', koshadhyaksh: 'श्री [नाम]' },
+                    { name: 'अम्बेडकर नगर', adhyaksh: 'श्री [नाम]', upadhyaksh: 'श्री [नाम]', mantri: 'श्री [नाम]', sanyukt_mantri: 'श्री [नाम]', koshadhyaksh: 'श्री [नाम]' },
+                    { name: 'अमेठी', adhyaksh: 'श्री [नाम]', upadhyaksh: 'श्री [नाम]', mantri: 'श्री [नाम]', sanyukt_mantri: 'श्री [नाम]', koshadhyaksh: 'श्री [नाम]' },
+                    { name: 'अमरोहा', adhyaksh: 'श्री [नाम]', upadhyaksh: 'श्री [नाम]', mantri: 'श्री [नाम]', sanyukt_mantri: 'श्री [नाम]', koshadhyaksh: 'श्री [नाम]' },
+                    { name: 'अौरैया', adhyaksh: 'श्री [नाम]', upadhyaksh: 'श्री [नाम]', mantri: 'श्री [नाम]', sanyukt_mantri: 'श्री [नाम]', koshadhyaksh: 'श्री [नाम]' },
                     { name: 'इटावा', adhyaksh: 'श्री [नाम]', upadhyaksh: 'श्री [नाम]', mantri: 'श्री [नाम]', sanyukt_mantri: 'श्री [नाम]', koshadhyaksh: 'श्री [नाम]' },
                     { name: 'इलाहाबाद (प्रयागराज)', adhyaksh: 'श्री [नाम]', upadhyaksh: 'श्री [नाम]', mantri: 'श्री [नाम]', sanyukt_mantri: 'श्री [नाम]', koshadhyaksh: 'श्री [नाम]' },
                     { name: 'उन्नाव', adhyaksh: 'श्री [नाम]', upadhyaksh: 'श्री [नाम]', mantri: 'श्री [नाम]', sanyukt_mantri: 'श्री [नाम]', koshadhyaksh: 'श्री [नाम]' },
@@ -211,7 +284,7 @@
                     </select>
                 </div>
 
-                <div class="bg-white border border-gray-200 p-6 md:p-12 rounded-3xl shadow-xl max-w-6xl mx-auto min-h-[500px]">
+                <div class="bg-white border border-gray-200 p-6 md:p-12 rounded-3xl shadow-xl max-w-6xl mx-auto">
                     <template x-for="z in zilaList" :key="'content-'+z.name">
                         <div x-show="activeZila === z.name" x-transition.opacity.duration.300ms class="flex flex-col items-center">
                             
@@ -229,7 +302,6 @@
                                     <h4 class="text-2xl font-bold text-gray-800 mb-2" x-text="z.adhyaksh"></h4>
                                     <p class="bg-red-600 text-white inline-block px-6 py-1 rounded-full text-sm font-bold uppercase tracking-wide">जिला अध्यक्ष</p>
                                 </div>
-
                                 <div class="bg-gray-50 p-10 rounded-2xl shadow-lg border-t-8 border-green-700 text-center w-full md:w-5/12 transform transition hover:scale-105">
                                     <i class="fa-solid fa-user-tie text-5xl text-gray-300 mb-4 block"></i>
                                     <h4 class="text-2xl font-bold text-gray-800 mb-2" x-text="z.mantri"></h4>
@@ -238,23 +310,22 @@
                             </div>
 
                             <div class="grid grid-cols-1 md:grid-cols-3 gap-6 w-full">
-                                <div class="bg-gray-50 p-8 rounded-2xl shadow-md border-t-8 border-blue-600 text-center transition hover:shadow-xl">
+                                <div class="bg-gray-50 p-8 rounded-2xl shadow-md border-t-8 border-blue-600 text-center hover:shadow-xl transition">
                                     <i class="fa-solid fa-user-tie text-4xl text-gray-300 mb-3 block"></i>
                                     <h4 class="text-xl font-bold text-gray-800 mb-1" x-text="z.upadhyaksh"></h4>
                                     <p class="bg-blue-600 text-white inline-block px-4 py-1 rounded-full text-xs font-bold uppercase">उपाध्यक्ष</p>
                                 </div>
-                                <div class="bg-gray-50 p-8 rounded-2xl shadow-md border-t-8 border-amber-600 text-center transition hover:shadow-xl">
+                                <div class="bg-gray-50 p-8 rounded-2xl shadow-md border-t-8 border-amber-600 text-center hover:shadow-xl transition">
                                     <i class="fa-solid fa-user-tie text-4xl text-gray-300 mb-3 block"></i>
                                     <h4 class="text-xl font-bold text-gray-800 mb-1" x-text="z.sanyukt_mantri"></h4>
                                     <p class="bg-amber-600 text-white inline-block px-4 py-1 rounded-full text-xs font-bold uppercase">संयुक्त मंत्री</p>
                                 </div>
-                                <div class="bg-gray-50 p-8 rounded-2xl shadow-md border-t-8 border-purple-600 text-center transition hover:shadow-xl">
+                                <div class="bg-gray-50 p-8 rounded-2xl shadow-md border-t-8 border-purple-600 text-center hover:shadow-xl transition">
                                     <i class="fa-solid fa-user-tie text-4xl text-gray-300 mb-3 block"></i>
                                     <h4 class="text-xl font-bold text-gray-800 mb-1" x-text="z.koshadhyaksh"></h4>
                                     <p class="bg-purple-600 text-white inline-block px-4 py-1 rounded-full text-xs font-bold uppercase">कोषाध्यक्ष</p>
                                 </div>
                             </div>
-
                         </div>
                     </template>
                 </div>
