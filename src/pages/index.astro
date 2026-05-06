@@ -11,9 +11,10 @@
 </head>
 <body class="bg-gray-50 text-gray-800 font-sans flex flex-col min-h-screen">
 
-    <!-- Header Section: Desktop matched to Organization Page, Mobile preserved -->
+    <!-- Header Section: Desktop padding increased to prevent cropping, Mobile preserved -->
     <header class="bg-white shadow-md border-b-4 border-blue-700">
-        <div class="container mx-auto px-1 md:px-4 py-2 md:py-4 flex flex-row items-center justify-between gap-1">
+        <!-- md:pt-10 specifically added to move text down on desktop -->
+        <div class="container mx-auto px-1 md:px-4 py-2 md:pt-10 md:pb-6 flex flex-row items-center justify-between gap-1">
              <!-- Logo Section -->
              <div class="flex items-center">
                 <img src="logo.png" alt="UPITI Logo" class="h-12 sm:h-14 md:h-32 w-auto object-contain">
@@ -21,12 +22,11 @@
             
             <!-- Scaled Header Text -->
             <div class="text-center flex-1 min-w-0 px-1">
-                <!-- Size 3.8vw for mobile, md:text-5xl for desktop like Org Page -->
-                <h1 class="text-[3.8vw] sm:text-base md:text-5xl text-red-600 font-bold leading-tight whitespace-nowrap overflow-hidden mb-1 md:mb-2">
+                <!-- md:leading-normal ensures vertical space on desktop -->
+                <h1 class="text-[3.8vw] sm:text-base md:text-5xl text-red-600 font-bold leading-tight md:leading-normal whitespace-nowrap overflow-hidden mb-1 md:mb-2">
                     उत्तर प्रदेश औद्योगिक प्रशिक्षण संस्थान कर्मचारी संघ
                 </h1>
-                <!-- Size 2.1vw for mobile, md:text-3xl for desktop like Org Page -->
-                <h2 class="text-[2.1vw] sm:text-[10px] md:text-3xl font-extrabold text-blue-900 leading-tight whitespace-nowrap overflow-hidden mb-1" style="font-family: 'Cambria', serif;">
+                <h2 class="text-[2.1vw] sm:text-[10px] md:text-3xl font-extrabold text-blue-900 leading-tight md:leading-normal whitespace-nowrap overflow-hidden mb-1" style="font-family: 'Cambria', serif;">
                     UTTAR PRADESH INDUSTRIAL TRAINING INSTITUTE EMPLOYEES UNION.
                 </h2>
                 <p class="text-[1.8vw] sm:text-[9px] md:text-base text-gray-600 font-semibold uppercase tracking-tight md:tracking-wide whitespace-nowrap">
