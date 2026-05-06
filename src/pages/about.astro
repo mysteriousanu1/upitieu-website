@@ -11,34 +11,70 @@
 </head>
 <body class="bg-gray-50 text-gray-800 font-sans flex flex-col min-h-screen">
 
+   <!-- Header Section: Logo shifted 2mm to the right -->
     <header class="bg-white shadow-md border-b-4 border-blue-700">
-        <div class="container mx-auto px-4 py-4 flex flex-col md:flex-row items-center justify-center md:justify-between">
-             <div class="flex items-center mb-4 md:mb-0">
-                <img src="/logo.png" alt="UPITI Logo" class="h-32 w-auto object-contain">
+        <div class="container mx-auto px-1 md:px-4 py-2 md:pt-10 md:pb-6 flex flex-row items-center justify-between gap-1">
+             <!-- Logo Section with 2mm left margin -->
+             <div class="flex items-center" style="margin-left: 2mm;">
+                <img src="/logo.png" alt="UPITI Logo" class="h-12 sm:h-14 md:h-32 w-auto object-contain">
             </div>
-            <div class="text-center flex-1 px-4">
-                <h1 class="text-5xl text-red-600 font-bold mb-2">उत्तर प्रदेश औद्योगिक प्रशिक्षण संस्थान कर्मचारी संघ</h1>
-                <h2 class="text-2xl md:text-3xl font-extrabold text-blue-400 mb-1">UTTAR Pradesh Industrial Training Institute Employees Association.</h2>
-                <p class="text-sm md:text-base text-gray-600 font-semibold uppercase tracking-wide">(उ0 प्र0 शासन, श्रम अनुभाग-6, संख्या 482/36-6-207/71 लखनऊ दिनांक 1 मार्च, 1974 द्वारा मान्यता प्राप्त)</p>
-                <p class="text-sm md:text-base text-gray-600 font-semibold uppercase tracking-wide">सम्बद्ध: राज्य कर्मचारी संयुक्त परिषद, उत्तर प्रदेश</p>
+            
+            <!-- Scaled Header Text: Desktop matched to Org Page, Mobile preserved -->
+            <div class="text-center flex-1 min-w-0 px-1">
+                <h1 class="text-[3.8vw] sm:text-base md:text-5xl text-red-600 font-bold leading-tight md:leading-normal whitespace-nowrap overflow-hidden mb-1 md:mb-2">
+                    उत्तर प्रदेश औद्योगिक प्रशिक्षण संस्थान कर्मचारी संघ
+                </h1>
+                <h2 class="text-[2.1vw] sm:text-[10px] md:text-3xl font-extrabold text-blue-900 leading-tight md:leading-normal whitespace-nowrap overflow-hidden mb-1" style="font-family: 'Cambria', serif;">
+                    UTTAR PRADESH INDUSTRIAL TRAINING INSTITUTE EMPLOYEES UNION.
+                </h2>
+                <p class="text-[1.8vw] sm:text-[9px] md:text-base text-gray-600 font-semibold uppercase tracking-tight md:tracking-wide whitespace-nowrap">
+                    (उ0 प्र0 शासन, श्रम अनुभाग-6, संख्या 482/36-6-207/71 लखनऊ दिनांक 1 मार्च, 1974 द्वारा मान्यता प्राप्त)
+                </p>
+                <p class="text-[2vw] sm:text-[9px] md:text-base text-red-600 font-semibold uppercase whitespace-nowrap">
+                    सम्बद्ध: राज्य कर्मचारी संयुक्त परिषद, उत्तर प्रदेश
+                </p>
             </div>
+
+            <!-- Balanced Spacer for Desktop Centering -->
+            <div class="hidden md:block md:w-32"></div>
         </div>
     </header>
 
-    <nav class="bg-blue-800 text-white shadow-lg sticky top-0 z-50">
+    <!-- Navigation Bar -->
+    <nav x-data="{ open: false }" class="bg-blue-800 text-white shadow-lg sticky top-0 z-50">
         <div class="container mx-auto px-4">
-            <ul class="flex flex-wrap items-center justify-center md:justify-start space-x-1 md:space-x-6 py-3 text-sm md:text-base font-medium">
+            <div class="flex md:hidden justify-start items-center py-3">
+                <button @click="open = !open" class="text-white focus:outline-none text-xl">
+                    <i class="fa-solid" :class="open ? 'fa-xmark' : 'fa-bars'"></i>
+                </button>
+            </div>
+
+            <ul class="hidden md:flex flex-wrap items-center justify-start space-x-6 py-3 text-base font-medium">
                 <li><a href="/index" class="hover:bg-blue-700 px-3 py-2 rounded transition">मुख्य पृष्ठ</a></li>
-                <li><a href="/about" class="hover:bg-blue-700 px-3 py-2 rounded transition">हमारे बारे में</a><li>
+                <li><a href="/about" class="hover:bg-blue-700 px-3 py-2 rounded transition">हमारे बारे में</a></li>
                 <li><a href="/organization" class="hover:bg-blue-700 px-3 py-2 rounded transition">संगठन संरचना</a></li>
                 <li><a href="/events" class="hover:bg-blue-700 px-3 py-2 rounded transition">घटनाक्रम</a></li>
                 <li><a href="/gallery" class="hover:bg-blue-700 px-3 py-2 rounded transition">गैलरी</a></li>
                 <li><a href="/orders" class="hover:bg-blue-700 px-3 py-2 rounded transition">शासनादेश / आदेश</a></li>
                 <li><a href="/contact" class="hover:bg-blue-700 px-3 py-2 rounded transition">सम्पर्क सूत्र</a></li>
             </ul>
+
+            <ul x-show="open" 
+                x-transition:enter="transition ease-out duration-200"
+                x-transition:enter-start="opacity-0 -translate-y-2"
+                x-transition:enter-end="opacity-100 translate-y-0"
+                @click.away="open = false"
+                class="md:hidden flex flex-col space-y-1 pb-4 text-sm font-medium border-t border-blue-700 pt-2">
+                <li><a href="/index" class="block hover:bg-blue-700 px-3 py-2 rounded">मुख्य पृष्ठ</a></li>
+                <li><a href="/about" class="block hover:bg-blue-700 px-3 py-2 rounded">हमारे बारे में</a></li>
+                <li><a href="/organization" class="block hover:bg-blue-700 px-3 py-2 rounded">संगठन संरचना</a></li>
+                <li><a href="/events" class="block hover:bg-blue-700 px-3 py-2 rounded">घटनाक्रम</a></li>
+                <li><a href="/gallery" class="block hover:bg-blue-700 px-3 py-2 rounded">गैलरी</a></li>
+                <li><a href="/orders" class="block hover:bg-blue-700 px-3 py-2 rounded">शासनादेश / आदेश</a></li>
+                <li><a href="/contact" class="block hover:bg-blue-700 px-3 py-2 rounded">सम्पर्क सूत्र</a></li>
+            </ul>
         </div>
     </nav>
-
     <main class="container mx-auto px-4 py-12 flex-grow space-y-12">
         
         <div class="text-center">
