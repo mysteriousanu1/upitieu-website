@@ -198,7 +198,7 @@
                 ]
             }">
                 <div class="max-w-xl mx-auto mb-10">
-                    <label class="block text-blue-900 font-bold mb-3 text-center text-xl">चयन करें:</label>
+                    <label class="block text-blue-900 font-bold mb-3 text-center text-xl">मण्डल चुनें:</label>
                     <select x-model="activeMandal" class="w-full p-4 border-2 border-blue-800 rounded-xl shadow-md focus:outline-none focus:ring-4 focus:ring-blue-200 font-bold text-blue-900 bg-white cursor-pointer appearance-none text-center text-lg">
                         <template x-for="m in mandalList" :key="m.name">
                             <option :value="m.name" x-text="m.name"></option>
@@ -313,7 +313,7 @@
             }">
                 
                 <div class="max-w-xl mx-auto mb-10">
-                    <label class="block text-green-900 font-bold mb-3 text-center text-xl">चयन करें:</label>
+                    <label class="block text-green-900 font-bold mb-3 text-center text-xl">जनपद चुनें:</label>
                     <select x-model="activeZila" class="w-full p-4 border-2 border-green-700 rounded-xl shadow-md focus:outline-none focus:ring-4 focus:ring-green-200 font-bold text-green-900 bg-white cursor-pointer appearance-none text-center text-lg">
                         <template x-for="z in zilaList" :key="z.name">
                             <option :value="z.name" x-text="z.name"></option>
